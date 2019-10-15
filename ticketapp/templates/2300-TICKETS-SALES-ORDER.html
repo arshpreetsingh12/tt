@@ -1,0 +1,347 @@
+{% extends 'dashboard_base.html' %}
+{% load staticfiles %}
+
+	{% block content %}
+	
+	<section>
+		<!-- <div class="about_us">
+			<h1>About Us</h1>
+			<div class="border-bottom my-3"></div>
+		</div> -->
+		<div class="container-fluid">
+			<div class="about_us_contain">
+				<h2>Sales Order</h2>
+				<div class="border-bottom my-2 text-left" style="margin-left: 0;"></div>
+				<div class="ticket_manage_post mt-5">
+					<div class="d-flex justify-content-between mb-4">
+						<div class="history_detail" style="display: flex; align-self: center; width: 100%; margin-top: 11px;">
+							<label for="" class="mr-1 mt-1">Show</label>
+							<select name="" id="" class="px-2 py-1">
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">4</option>
+								<option value="">5</option>
+							</select>
+							<label for="" class="ml-1 mt-1 mr-2">entries</label>
+						</div>
+						<div class="history_detail">
+							<div class="d-flex">
+								<div class="mr-3">
+									<label for="" class="mb-1">From</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="mr-3">
+									<label for="" class="mb-1">To</label>
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="history_detail">
+							<label for=" " class="mb-1">Search:</label>
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col">Invoice</th>
+									<th scope="col">Date</th>
+									<th scope="col">Title</th>
+									<th scope="col">Name</th>
+									<th scope="col">Total</th>
+									<th scope="col" style="text-align: center;">Attendees</th>
+									<th scope="col">Purchase</th>
+									<th scope="col">Donation</th>
+									<th scope="col">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td scope="row">
+										<a href="#">EP70711235</a>
+									</td>
+									<td>
+										<a href="#">2017-09-27 12:12 pm</a>
+									</td>
+									<td>John doe</td>
+									<td>PNBCOP16</td>
+									<td><a href="#">$ 55.00</a></td>
+									<td class="text-center"><a href="#" data-toggle="modal" data-target="#sale_order" data-target=".bd-example-modal-lg">8</a></td>
+									<td>
+										
+									</td>
+									<td>$55.00</td>
+									<td>
+										<a href="#">
+											<i class="fas fa-download mr-2"></i>
+										</a>
+										<a href="#" data-toggle="modal" data-target="#Thankyou" data-target=".bd-example-modal-lg" style="color: #ff0000 !important;"><i class="far fa-handshake"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">
+										<a href="#">EP70711235</a>
+									</td>
+									<td>
+										<a href="#">2017-09-27 12:12 pm</a>
+									</td>
+									<td>John doe</td>
+									<td>PNBCOP16</td>
+									<td><a href="#">$ 55.00</a></td>
+									<td class="text-center"><a href="#" data-toggle="modal" data-target="#sale_order2" data-target=".bd-example-modal-lg">8</a></td>
+									<td>
+										$99.00
+									</td>
+									<td></td>
+									<td>
+										<a href="#">
+											<i class="fas fa-download mr-2"></i>
+										</a>
+										<a href="#" data-toggle="modal" data-target="#Thankyou" data-target=".bd-example-modal-lg" style="color: #ff0000 !important;"><i class="far fa-handshake"></i></a>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">
+										<a href="#">EP70711235</a>
+									</td>
+									<td>
+										<a href="#">2017-09-27 12:12 pm</a>
+									</td>
+									<td>John doe</td>
+									<td>PNBCOP16</td>
+									<td><a href="#">$ 55.00</a></td>
+									<td class="text-center"><a href="#" data-toggle="modal" data-target="#sale_order1" data-target=".bd-example-modal-lg">8</a></td>
+									<td>
+										$99.00
+									</td>
+									<td>$50.00</td>
+									<td>
+										<a href="#">
+											<i class="fas fa-download mr-2"></i>
+										</a>
+										<a href="#" data-toggle="modal" data-target="#Thankyou" data-target=".bd-example-modal-lg" style="color: #059a09 !important;"><i class="far fa-handshake"></i></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="d-flex justify-content-between">
+							<div class="showing_heading">
+								<h3>Showing 1 to 3  of 3 entries</h3>
+							</div>
+							<div class="pagi">
+								<nav aria-label="Page navigation example">
+									<ul class="pagination">
+										<li class="page-item disabled">
+											<a class="page-link" href="#" tabindex="-1">Previous</a>
+										</li>
+										<li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
+										<li class="page-item">
+											<a class="page-link" href="#">Next</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<!-- Attendeees Modal -->
+					<div class="modal fade bd-example-modal-lg" id="sale_order" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="table-responsive mt-4 w-100">
+									<table class="table">
+										<thead class="thead-light">
+											<tr>
+												<th scope="col">Guest Name</th>
+												<th scope="col">Section</th>
+												<th scope="col">Row</th>
+												<th scope="col">Seat</th>
+												<th scope="col">Amount</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td scope="row">Guest E</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td scope="row">Guest D</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td scope="row">Guest C</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td scope="row">Guest A</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Attendeees Modal -->
+					<div class="modal fade bd-example-modal-lg" id="sale_order1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="table-responsive mt-4 w-100">
+									<table class="table">
+										<thead class="thead-light">
+											<tr>
+												<th scope="col">Guest Name</th>
+												<th scope="col">Name of Seat</th>
+												<th scope="col">Amount</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td scope="row">Guest E</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td scope="row">Guest D</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td scope="row">Guest C</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td scope="row">Guest A</td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Attendeees Modal -->
+					<div class="modal fade bd-example-modal-lg" id="sale_order2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="table-responsive mt-4 w-100">
+									<table class="table">
+										<thead class="thead-light">
+											<tr>
+												<th scope="col">Guest Name</th>
+												<th scope="col">Table</th>
+												<th scope="col">Seat</th>
+												<th scope="col">Amount</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td scope="row">Guest E</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td scope="row">Guest D</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td scope="row">Guest C</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td scope="row">Guest A</td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- thankyou Modal -->
+					<div class="modal fade bd-example-modal-lg" id="Thankyou" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="d-flex justify-content-between upload_links mt-3 mb-0 mx-3">
+									<a href="#">Upload Background Image</a>
+									<a href="#">Free Images</a>
+									<a href="#">Send Thank You Note Now</a>
+								</div>
+								<div class="container-fluid background-img">
+									<div class="row mt-3 mb-3">
+										<div class="col-md-12">
+											<div class="border py-4 px-3 border-flower">
+												<div class="invited_area">
+													<h1 class="text-center">
+														<img src="./assets/images/thankyou1.png" class="img-fluid" alt="thankyou1">
+													</h1>
+													<div class="text-center mb-3 mt-3">
+														<div class="d-flex justify-content-center">
+															<i class="fas fa-star mr-3"></i>
+															<i class="fas fa-star mr-3"></i>
+															<i class="fas fa-star mr-3"></i>
+															<i class="fas fa-star mr-3"></i>
+															<i class="fas fa-star"></i>
+														</div>
+													</div>
+													<div>
+														<label for="">Name</label>
+														<input type="text" class="form-control mb-3" placeholder="Enter Name">
+													</div>
+													<div>
+														<label for="">Message</label>
+														<textarea name="" id="" cols="30" rows="10" class="form-control mb-3" placeholder="Message"></textarea>
+													</div>
+													<div>
+														<label for="">Host</label>
+														<input type="text" class="form-control" placeholder="Host Name">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Section End-->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-sort-up"></i></a>
+	</div>
+	{% endblock %}

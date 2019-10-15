@@ -1,0 +1,26 @@
+{% load staticfiles %}
+	<header class="top_header">
+		<div class="container-fluid">
+			<div class="top_header_width">
+				<div class="d-flex">
+					<div class="left-icons">
+						<a href="{% url 'social:begin' 'facebook' %}">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="#">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="#">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a href="{% url 'social:begin' 'google-oauth2' %}">
+							<i class="fab fa-google-plus-g"></i>
+						</a>
+						<a href="#">
+							<i class="far fa-envelope"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>

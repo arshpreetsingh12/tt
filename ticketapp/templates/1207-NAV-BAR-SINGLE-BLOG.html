@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+
+	{% block content %}
+
+	<section>
+		<div class="blog_page">
+			<h1>Single Blog Page</h1>
+			<div class="border-bottom my-3"></div>
+		</div>
+		<div class="login_page_area">
+			<div class="container-fluid">
+				<div class="about_us_contain blog_pages">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="row my-5">
+								<a href="#">
+									<div class="blog_product">
+										<div class="single_blog">
+											<img src="{% static '/assets/images/events_opening.png' %}" alt="events_opening" class="img-fluid">
+										</div>
+										<div class="blog_pd">
+											<div class="d-flex block_date">
+												<div class="blog_date mr-3">
+													10/2017
+												</div>
+												<h5 class="blog_date_heading">
+													US VISA APPLICATION GUIDELINES
+												</h5>
+											</div>
+											<div class="blog_para">
+												<p>
+													StayConnect provides process support for visa for all countries across the globe. With a laser focus on customer experience and reliability, we provide expert consultation and reduce hassle by being the single point of contact inthe entire process. <span class="moretext">With the availability of online documentation, online payment and pick and drop off facility for your documents, you can trust us with your visa and prepare for your journey.</span>
+												</p>
+											</div>
+											<div class="d-flex justify-content-between">
+												<div class="blog_cate">
+													<label>Categories:</label>
+													<span>Passport Photo</span>
+												</div>
+												<div class="blog_cate">
+													<label>Written by:</label>
+													<span>Admin</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Section End-->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-sort-up"></i></a>
+	</div>
+	{% endblock %}

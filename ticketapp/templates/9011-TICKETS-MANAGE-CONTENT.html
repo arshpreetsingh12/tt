@@ -1,0 +1,169 @@
+
+{% extends 'admin-base.html' %}
+{% load static from staticfiles %}
+{% block content %}
+  <!-- Content Wrapper. Contains page content -->
+
+   <div class="wrapper">
+  <div class="content-wrapper">
+  
+    <section class="content container-fluid">
+      <h1 class="text-center">Manage Pages <span><button class="btn btn-primary">Add Page</button></span></h1>
+    <!-- dashboard content -->
+    <div class="manage_admin">
+      <div class="add_min d-flex justify-content-between"> 
+    <h3>Manage Pages</h3>
+    <ul class="mg_top_ic">
+      <li><i class="fa fa-refresh" aria-hidden="true"></i></li>
+      <li><i class="fa fa-lock" aria-hidden="true"></i></li>
+      <li><i class="fa fa-unlock" aria-hidden="true"></i></li>
+    </ul>
+    </div>
+     
+              <!-- <div class="d-flex justify-content-center">
+                <div class="mr-3">
+                  <label for="" class="mb-1">From</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="mr-3">
+                  <label for="" class="mb-1">To</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+ -->
+
+              <div class="posting_table">
+   <table id="example" class="table table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></th>
+                <th>Page Title</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+          
+        
+               <tr>
+                <td><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></td>
+                <td class="image_id">About</td>
+              
+                <td class="list_icon text-center"><a href="#"><i class="fa fa-unlock" aria-hidden="true"></i></a></td>
+                <td class="list_icon d-flex">
+                  <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    
+                    <a href="#">
+                     <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                 </td>
+            </tr>
+             <tr>
+                <td><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></td>
+                <td class="image_id">Privacy</td>
+              
+                <td class="list_icon text-center"><a href="#"><i class="fa fa-unlock" aria-hidden="true"></i></a></td>
+                <td class="list_icon d-flex">
+                  <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    
+                    <a href="#">
+                     <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                 </td>
+            </tr>
+             <tr>
+                <td><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></td>
+                <td class="image_id">Term</td>
+              
+                <td class="list_icon text-center"><a href="#"><i class="fa fa-unlock" aria-hidden="true"></i></a></td>
+                <td class="list_icon d-flex">
+                  <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    
+                    <a href="#">
+                     <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                 </td>
+            </tr>
+             <tr>
+                <td><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></td>
+                <td class="image_id">Why us</td>
+              
+                <td class="list_icon text-center"><a href="#"><i class="fa fa-unlock" aria-hidden="true"></i></a></td>
+                <td class="list_icon d-flex">
+                  <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    
+                    <a href="#">
+                     <i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+                 </td>
+            </tr>
+           
+           
+        </tbody>
+       <!--  <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot> -->
+    </table>
+              </div>
+              
+
+    </div>
+      
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+
+
+  
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+
+<!-- REQUIRED JS SCRIPTS -->
+{% endblock %}

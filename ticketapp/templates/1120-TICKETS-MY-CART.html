@@ -1,0 +1,289 @@
+{% extends 'tickets-base.html' %}
+{% load static from staticfiles %}
+
+
+	{% block content %}
+
+
+	<div class="nav_area">
+		<div class="mycart">
+			<!-- Ticket content -->
+			<h2 class="mb-3 ticket_heading mt-4">TICKETLESS</h2>	
+			<div class="ticket_popup ticket_popups modal-common-div" style="display: block;">
+				<div class="thanks-page">
+					<h5>Thank you for your generosity.</h5>
+					<div class="d-flex my-3">
+						<label class="ticket_radio_btn"> Gift
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+						<label class="ticket_radio_btn ml-3 mr-3"> Donate
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+						<div class="d-flex">
+							<label class="mr-2" style="    align-self: flex-end;">
+								$
+							</label>
+							<input type="text" class="form-control" style="width: 45px;">
+						</div>
+					</div>
+					<textarea class="w-100 form-control mb-2" rows="4" placeholder="Enter Message Here"></textarea>
+				</div>
+				<div class="mb-2 mt-4 text-right">
+					<!-- <a href="#" class="next-btn">NEXT</a> -->
+					<button type="button" class="btn btn-dark_nc next-btn next-section-popup">NEXT</button>
+					<button type="button" class="btn btn-dark_nc cancel-btn ml-2" data-dismiss="modal">CANCEL</button>
+					<!-- <a href="#" class="cancel-btn ml-2" data-dismiss="modal">CANCEL</a> -->
+				</div>
+			</div>
+			<!-- General content -->
+			<h2 class="mb-3 ticket_heading">GENERAL ADMISSION</h2>
+			<div class="ticket_popup ticket_popups modal-common-div">
+				<h5 class="mb-2">My Cart</h5>
+				<div class="count_person table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr class="text-center">
+								<th scope="col">Remove</th>
+								<th scope="col">Seat Type</th>
+								<th scope="col">Quantity</th>
+								<th scope="col">First Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last Name</th>
+								<th scope="col">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="text-center">
+								<th scope="row" class="text-center">
+									<a href="#" class="remove_icon">
+										<i class="far fa-times-circle" aria-hidden="true"></i>
+									</a>
+								</th>
+								<td>Gold</td>
+								<td>2</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<input type="text" class="form-control" style="width: 150px;">
+										<input type="text" class="form-control ml-2" style="width: 150px;">
+									</div>
+									<div class="d-flex mt-2 justify-content-center">
+										<input type="text" class="form-control" style="width: 150px;">
+										<input type="text" class="form-control ml-2" style="width: 150px;">
+									</div>
+								</td>
+								<td>
+									$200.00
+								</td>
+							</tr>
+							<tr class="text-center">
+								<th scope="row" class="text-center">
+									<a href="#" class="remove_icon">
+										<i class="far fa-times-circle" aria-hidden="true"></i>
+									</a>
+								</th>
+								<td>Silver</td>
+								<td>1</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<input type="text" class="form-control" style="width: 150px;">
+										<input type="text" class="form-control ml-2" style="width: 150px;">
+									</div>
+									<div class="d-flex mt-2 justify-content-center">
+										<input type="text" class="form-control" style="width: 150px;">
+										<input type="text" class="form-control ml-2" style="width: 150px;">
+									</div>
+								</td>
+								<td>
+									$200.00
+								</td>
+							</tr>
+							<tr class="text-center">
+								<th scope="row" class="text-center">
+									<a href="#" class="remove_icon">
+										<i class="far fa-times-circle" aria-hidden="true"></i>
+									</a>
+								</th>
+								<td>Bronze</td>
+								<td>1</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<input type="text" class="form-control" style="width: 150px;">
+										<input type="text" class="form-control ml-2" style="width: 150px;">
+									</div>
+									<div class="d-flex mt-2 justify-content-center">
+										<input type="text" class="form-control" style="width: 150px;">
+										<input type="text" class="form-control ml-2" style="width: 150px;">
+									</div>
+								</td>
+								<td>
+									$200.00
+								</td>
+							</tr>
+							<tr class="text-center">
+								<th scope="row" class="text-center">
+								</th>
+								<td></td>
+								<th>3</th>
+								<td>
+								</td>
+								<th>
+									$600.00
+								</th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="thanks-page">
+					<h5>Thank you for your generosity.</h5>
+					<div class="d-flex my-3">
+						<label class="ticket_radio_btn"> Gift
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+						<label class="ticket_radio_btn ml-3 mr-3"> Donate
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+						<div class="d-flex">
+							<label class="mr-2" style="    align-self: flex-end;">
+								$
+							</label>
+							<input type="text" class="form-control" style="width: 45px;">
+						</div>
+					</div>
+					<textarea class="w-100 form-control mb-2" rows="4" placeholder="Enter Message Here"></textarea>
+				</div>
+				<div class="mb-2 mt-4 text-right">
+					<button type="button" class="btn btn-dark_nc  next-section-popup">NEXT</button>
+					<button type="button" class="btn btn-dark_nc cancel-btn ml-2" data-dismiss="modal">CANCEL</button>
+				</div>
+			</div>
+			<!-- Assigned content -->
+			<h2 class="mb-3 ticket_heading ">ASSIGNED SEATS</h2>	
+			<div class="ticket_popup ticket_popups modal-common-div" style="display: block;">
+				<h5 class="mb-2">My Cart</h5>
+				<div class="count_person table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr class="text-center">
+								<th scope="col">Remove</th>
+								<th scope="col">Section</th>
+								<th scope="col">Row</th>
+								<th scope="col">Seat Number</th>
+								<th scope="col">Quantity</th>
+								<th scope="col">First Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last Name</th>
+								<th scope="col">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="text-center">
+								<th scope="row" class="text-center">
+									<a href="#" class="remove_icon">
+									   <i class="far fa-times-circle" aria-hidden="true"></i>
+									</a>
+								</th>
+								<td>A</td>
+								<td>a</td>
+								<td>10</td>
+								<td>1</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<input type="text" class="form-control" style="width: 150px;">
+										<input type="text" class="form-control ml-2" style="width: 150px;">
+									</div>
+								</td>
+								<td>
+									$200.00
+								</td>
+							</tr>
+							<tr class="text-center">
+								<th scope="row" class="text-center">
+									<a href="#" class="remove_icon">
+									   <i class="far fa-times-circle" aria-hidden="true"></i>
+									</a>
+								</th>
+								<td>A</td>
+								<td>a</td>
+								<td>10</td>
+								<td>1</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<input type="text" class="form-control" style="width: 150px;">
+										<input type="text" class="form-control ml-2" style="width: 150px;">
+									</div>
+								</td>
+								<td>
+									$200.00
+								</td>
+							</tr>
+							<tr class="text-center">
+								<th scope="row" class="text-center">
+									<a href="#" class="remove_icon">
+									   <i class="far fa-times-circle" aria-hidden="true"></i>
+									</a>
+								</th>
+								<td>A</td>
+								<td>a</td>
+								<td>10</td>
+								<td>1</td>
+								<td>
+									<div class="d-flex justify-content-center">
+										<input type="text" class="form-control" style="width: 150px;">
+										<input type="text" class="form-control ml-2" style="width: 150px;">
+									</div>
+								</td>
+								<td>
+									$200.00
+								</td>
+							</tr>
+							<tr class="text-center">
+								<th scope="row" class="text-center">
+								</th>
+								<td></td>
+								<td></td>
+								<td></td>
+								<th>3</th>
+								<td>
+								</td>
+								<th>
+									$600.00
+								</th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="thanks-page">
+					<h5>Thank you for your generosity.</h5>
+					<div class="d-flex my-3">
+						<label class="ticket_radio_btn"> Gift
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+						<label class="ticket_radio_btn ml-3 mr-3"> Donate
+							<input type="radio" name="radio">
+							<span class="checkmark"></span>
+						</label>
+						<div class="d-flex">
+							<label class="mr-2" style="    align-self: flex-end;">
+								$
+							</label>
+							<input type="text" class="form-control" style="width: 45px;">
+						</div>
+					</div>
+					<textarea class="w-100 form-control mb-4" rows="4" placeholder="Enter Message Here"></textarea>
+				</div>
+				<div class="mb-4 mt-4 text-right ">
+					<button type="button" class="btn btn-dark_nc next-btn next-section-popup">NEXT</button>
+					<!-- <a href="#" class="next-btn">NEXT</a> -->
+					<!-- <a href="#" class="cancel-btn ml-2" data-dismiss="modal">CANCEL</a> -->
+					<button type="button" class="cancel-btn ml-2 btn btn-dark_nc" data-dismiss="modal">CANCEL</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Navbar End -->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-sort-up"></i></a>
+	</div>
+	{% endblock %}

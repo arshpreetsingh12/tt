@@ -1,0 +1,566 @@
+{% extends 'dashboard_base.html' %}
+{% load static from staticfiles %}
+
+
+	{% block content %}
+	
+		<section id="dashboard__2">
+			<form action="tickets_sale" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{% if messages %}
+			{% for message in messages %}
+    		{{ message }}
+    		{% endfor %}
+						
+			{% endif %}
+		<div class="container dashboard_2_container">
+			<div class="ticket__1">
+				<div class="step__1">
+					<div class="ticker__hdr mb-3">
+						<h3 class="ticker_ttl">STEP 1: SET TITLE</h3>
+					</div>
+					<input type="text" class="form-control" name="title"  >
+				</div>
+				<div class="step__2">
+					<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 2: DESCRIPTION</h3>
+					</div>
+					<textarea class="form-control" rows="2" name="description" placeholder=""   ></textarea>
+				</div>
+				<!-- step 2 end -->
+				<div class="step__3" id="add_div">
+					<div class="ticker__hdr mb-3 mt-4">
+						<div class="d-flex justify-content-between">
+							<h3 class="ticker_ttl">STEP 3: SET EVENT DATE AND TIME</h3>
+							<div class="text-right add_btn">
+								<a href="javascript:void(0)" class="add_field_button" id="add_new_date">Add New Date / Time</a>
+								<!-- button style="backgroundcolor: black" id="myTable">Add New Date / Time</button>
+ -->							</div>
+						</div>
+					</div>	
+					<!-- border 1 set end -->
+							<!-- append event boxes here -->
+					<!-- border 2 set end -->
+				</div>
+				<!-- step 4 start -->
+				<div class="step__3" >
+					<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 4: VENUE AND INVITATION</h3>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="step-4-form">
+								<div class="fm-1">
+									<input type="text" class="form-control"    placeholder="Name of Venue" name="name_of_venue"> 
+								</div>
+								
+								<div class="fm-1">
+									<input type="text" class="form-control"  placeholder="Address" name="address"  >
+								</div>
+								
+								<div class="fm-1">
+									<input type="text" class="form-control"  placeholder="State" name="state"  >
+								</div>
+								
+								<div class="fm-1">
+									<input type="text" class="form-control"  placeholder="Postal Code"   name="postal_code">
+								</div>
+							
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="step-4-form">
+							<div class="fm-1">
+									<input type="text" class="form-control"    placeholder="Website" name="website">
+								</div>
+								<div class="fm-1">
+									<!-- <select class="form-control" name="country"> -->
+											<!-- <option>Country</option>
+											<option value="US">US</option>
+											<option value="UK">UK</option>
+											<option value="Aus">Aus</option>
+											<option value="India">India</option>
+											<option value="NZ">NZ</option> -->
+											{% load countries %}
+											{% get_countries as countries %}
+											<select id="" name="country" class="form-control">
+											{% for country in countries %}
+											  <!-- <option value="">Country</option> -->
+										    <option value="{{ country.name }}">{{ country.name }}</option>
+											{% endfor %}
+									</select>
+								</div>
+								<div class="fm-1"> 
+									<input type="text" class="form-control"    placeholder="City" name="city">
+								</div>
+									<div class="fm-1">
+									<input type="text" class="form-control"  placeholder="Telephone" name="telephone"  >
+								</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<!-- step 4 end -->
+				<!-- step 5 start -->
+				<div class="step__3">
+					<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 5: SET SEATS AND PRICE</h3>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="ticketless_event" >
+						<label class="form-check-label ticket-less" for="exampleRadios1">
+							TICKETLESS EVENT
+						</label>
+					</div>
+					<div class="radio-list-d my-3 mx-3">
+						<div class="form-check form-check-inline" style="margin-left: 12px;">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="birthday">
+							<label class="form-check-label" for="inlineRadio1">Birthday</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="weddings">
+							<label class="form-check-label" for="inlineRadio2">Weddings</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="graduation">
+							<label class="form-check-label" for="inlineRadio3">Graduation</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="charitable">
+							<label class="form-check-label" for="inlineRadio4">Charitable</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="fundraising">
+							<label class="form-check-label" for="inlineRadio5">Fundraising</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="anniversary">
+							<label class="form-check-label" for="inlineRadio6">Anniversary</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="new_born">
+							<label class="form-check-label" for="inlineRadio7">New Born</label>
+						</div>
+					</div>
+
+					<!-- genrel admition -->
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="general_admission" >
+						<label class="form-check-label ticket-less" for="exampleRadios1">
+							GENERAL ADMISSION
+						</label>
+					</div>
+					<div class="table-shet my-5 table-responsive">
+						<table class="table table-striped table-bordered">
+						  <thead>
+						    <tr>
+						      <th scope="col">Name of seat</th>
+						      <th scope="col" class="text-center">Availability</th>
+						      <th scope="col" class="text-center">Price</th>
+						      <th scope="col" class="text-center">Enable</th>
+						      <th scope="col" class="text-center"><i class="fas fa-plus"></i></th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row"><input type="text" class="form-control" placeholder="GOLD" name="gold"  ></th>
+						      <td><input type="text" class="form-control m-auto text-center" placeholder="100" name="gold_availability"   style="width: 100px;"></td>
+						      <td class="text-center"><input type="text" class="form-control m-auto text-center" placeholder="100" name="gold_price"   style="width: 100px;"></td>
+						      <td><!-- Default checked -->
+						      	<form>
+								<div class="form-check text-center">
+								    <input type="checkbox" class="form-check-input" name="gold_checkbox" id="exampleCheck1" value="True">
+								</div>
+							</form></td>
+								<td class="x text-center"><i class="fas fa-times" aria-hidden="true"></i></td>
+						    </tr>
+						   <tr>
+						      <th scope="row"><input type="text" class="form-control" placeholder="SILVER" name="silver"  ></th>
+						      <td><input type="text" class="form-control m-auto text-center" placeholder="100" name="silver_availability"   style="width: 100px;"></td>
+						      <td class="text-center"><input type="text" class="form-control m-auto text-center" placeholder="100" name="silver_price"    style="width: 100px;"></td>
+						      <td><!-- Default checked -->
+						      	<form>
+								<div class="form-check text-center">
+								   <input type="checkbox" class="form-check-input" name="silver_checkbox" id="exampleCheck1" value="True">
+								</div>
+							</form></td>
+								<td class="x text-center"><i class="fas fa-times" aria-hidden="true"></i></td>
+						    </tr>
+						    <tr>
+						      <th scope="row"><input type="text" class="form-control" placeholder="BRONZE"  name="bronze"></th>
+						      <td><input type="text" class="form-control m-auto text-center" placeholder="100" name="bronze_availability"   style="width: 100px;"></td>
+						      <td><input type="text" class="form-control m-auto text-center" placeholder="100" name="bronze_price"   style="width: 100px;"></td>
+						      <td><!-- Default checked -->
+						      	<form>
+								<div class="form-check text-center">
+								    <input type="checkbox" class="form-check-input" name="bronze_checkbox" id="exampleCheck1" value="True">
+								</div>
+							</form></td>
+								<td class="x text-center"><i class="fas fa-times" aria-hidden="true"></i></td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+					<!-- assigned seatting -->
+					<div class="assigned my-4">
+						<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="assigned_seating">
+						<label class="form-check-label ticket-less" for="exampleRadios1">
+							ASSIGNED SEATING
+						</label>
+						<span> Seating Chart is required. (Must be JPG, PNG or GIF smaller then 2Mb)</span>
+					</div>
+					</div>
+					<!-- assigned seatting chart-->
+					<!-- <div class="form-group py-3 mr-4 d-flex justify-content-between"> -->
+								<div id="upload_button" class=" align-self-center">
+							<label>
+						
+							<input type="file" id="image" ngf-select ng-model="new_files" onchange="Filevalidation()"   name="chart" multiple  >
+							
+							<button class="btn btn-dark" >Browse...</button>
+
+										<!-- <span>No File Selected.</span> -->
+							</label>
+						</div>
+					<!-- </div> -->
+					<div class="assign-chart" style="width: 100%; background: red;text-align: center; padding: 500px 0; color: #fff;" >
+						<img style="height:500px; width:500px;" class="cb-logo" src=""  alt="">
+					ASSIGNED SEAT CHART
+					</div>
+					<!-- step 6 -->
+					<div class="step__6">
+					<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 6: SELLER INFORMATION</h3>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="row">
+							<div class="col-md-6">
+								<div class="fm-1 mb-2">
+									<input type="text" class="form-control" name="f_name"  placeholder="First Name" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="fm-1 mb-2">
+									<input type="text" class="form-control" name="l_name" placeholder="Last Name" >
+								</div>
+							</div>
+							</div>
+							<div class="step-6-form all-dv-m">
+								<div class="fm-1">
+									<input type="text" class="form-control" name="seller_company_name"  placeholder="Company Name (if applicable)">
+								</div>
+								<div class="fm-1">
+									<input type="text" name="seller_website" class="form-control"    placeholder="Website">
+								</div>
+								<div class="fm-1">
+									<input type="text" class="form-control" name="seller_address"   placeholder="Address">
+								</div>
+								<div class="fm-1">
+									<!-- <select class="form-control">
+											<option>Country</option>
+											<option>India</option>
+											<option>England</option>
+											<option>Sri Lanka</option>
+											<option>U.S</option>
+										</select>-->	
+											{% load countries %}
+									{% get_countries as countries %}
+										<select id="" name="seller_country" class="form-control">
+									<option>-Country-</option>
+									{% for country in countries %}
+
+								    <option value="{{ country.name }}">{{ country.name }}</option>
+								{% endfor %}
+								</select>							
+								</div>
+								<div class="fm-1">
+								<!-- 	<select class="form-control">
+											<option>State</option>
+											<option>Demo</option>
+											<option>Demo</option>
+											<option>Demo</option>
+											<option>Demo</option>
+										</select> -->
+								<input type="text" class="form-control"  placeholder="State" name="seller_state"  >
+								</div>
+								<div class="fm-1">
+									<input type="text" class="form-control" name="seller_city"  placeholder="City"  >
+								</div>
+							
+								<div class="fm-1">
+									<input type="text" class="form-control" name="seller_postal_code"     placeholder="Postal Code">
+								</div>
+								<div class="fm-1">
+									<input type="text" class="form-control" name="seller_telephone"     placeholder="Telephone">
+								</div>
+
+							</div>
+					</div>
+					<!-- right side column -->
+					<div class="col-md-6">
+						<div class="info-add-file">
+							<div class="form-group d-flex justify-content-between">
+								<div id="upload_button" class=" align-self-center">
+									<label>
+										<input type="file" id="image" accept="image/*" ngf-select="" ng-model="new_files" multiple name="logo"  >
+										<button class="btn btn-dark">Browse...</button>
+										<span>No File Selected.</span>
+									</label>
+									<p class="up-text mb-2">Logo (jpg, gif, png)</p>
+										<p class="upload-text">Profile / Company Logo (200 x 200 px)</p>
+								</div>
+									
+									
+									<div class="add-img"><img id="image" class="cb-logo"  src="{% static 'assets/images/add-logo.png' %}" alt="pdf"></div>
+									
+							</div>
+
+							<div class="form-group d-flex justify-content-between">
+								<div id="upload_button" class=" align-self-center">
+									<label>
+										<input type="file" ngf-select="" ng-model="new_files" multiple id="image" name="licence">
+										<button class="btn btn-dark">Browse...</button>
+										<span>No File Selected.</span>
+									</label>
+										<p class="up-text mb-2">Business licence-optional (jpg, gif, png)</p>
+										<p class="upload-text">Displaying business licence will show customer the business is legitimate.</p>
+								</div>
+									<div class="add-img"><img src="{% static 'assets/images/upload.png' %}" alt="pdf"></div>
+							</div>
+							<div class="dash_2-testarea">
+								<textarea class="form-control" rows="6"   name="txt_area" placeholder="About Seller"></textarea>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- row -->
+					</div>
+				</div>
+
+
+				</div>
+				<!-- step 6 end -->
+				<!-- step 7 start -->
+				<div class="step__7">
+				<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 7: TERMS</h3>
+					</div>
+					<div class="table-start my-4">
+					<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th  colspan="3" scope="col">Title</th>
+      <th scope="col" class="text-center">Text</th>
+      <th scope="col" class="text-center">Enable</th>
+      <th scope="col" style="color: #100cec; font-size: 18px;" class="text-center">+</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">Damage and Defective Items</th>
+      <td class="text-center">Edit</td>
+      <td class="text-center">
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x text-center"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text"  scope="row">I did not recive my order</th>
+       <td class="text-center">Edit</td>
+      <td class="text-center">
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x text-center"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">Wrong Item</th>
+       <td class="text-center">Edit</td>
+      <td class="text-center">
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x text-center"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">Items can't be returned</th>
+       <td class="text-center">Edit</td>
+      <td class="text-center">
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x text-center"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">Restocking Fee</th>
+       <td class="text-center">Edit</td>
+      <td class="text-center">
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x text-center"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">Return shipping</th>
+       <td class="text-center">Edit</td>
+      <td class="text-center">
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x text-center"><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <th colspan="3" class="th_text" scope="row">No refund policy</th>
+       <td class="text-center">Edit</td>
+      <td class="text-center">
+      		<form>
+				<div class="form-check">
+				 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				</div>
+			</form>
+		</td>
+      <td class="x text-center"><i class="fas fa-times"></i></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+				</div>
+				<!-- step 7 end -->
+				<!-- step 8 start -->
+				<div class="step__8">
+				<div class="ticker__hdr mb-3 mt-4">
+						<h3 class="ticker_ttl">STEP 8: PAYMENT AND TERMS</h3>
+					</div>
+					<div class="talle-start table-responsive">
+						<table class="table table-hover d2-tbl-bdr">
+						  <thead class="payment-hdr">
+						    <tr>
+						      <th scope="col">Ticket Type / Service Fees</th>
+						      <th scope="col">Special $ / Attendees</th>
+						      <th scope="col">Minimum / Attendees</th>
+						      <th scope="col">Regular $ / Attendees**</th>
+						      <th scope="col">Minimum Attendees</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td scope="row">Ticketless</td>
+						      <td class="text-center">$0.40</td>
+						      <td class="text-center">30</td>
+						      <td class="text-center">$1.00</td>
+						      <td class="text-center">15</td>
+						    </tr>
+						    <tr>
+						       <td scope="row">General Admission</td>
+						      <td class="text-center">$0.60</td>
+						      <td class="text-center">40</td>
+						      <td class="text-center">$2.00</td>
+						      <td class="text-center">15</td>
+						    </tr>
+						    <tr>
+						       <td scope="row">Assigned Seat</td>
+						      <td class="text-center">$0.80</td>
+						      <td class="text-center">50</td>
+						      <td class="text-center">$3.00</td>
+						      <td class="text-center">15</td>
+						    </tr>
+
+						  </tbody>
+						</table>
+					</div>
+					<div class="d2-note">
+						<p><b>Note:</b> Unused service fee is forfeited and irredeemable on event end date and time.</p>
+						<p>**Site sends 'Top Up' email reminder automatically when there are 30% left unused attendees to avoid freezing of your live posting. Regular Price shall apply.</p>
+					</div>
+					<div class="col-md-5 my-4">
+						<div class="no-attend d-flex justify-content-between align-items-center">
+						<p>A.&nbsp;&nbsp;&nbsp;&nbsp;Enter the number of attendees</p>
+						<div style="width: 60px;"><input type="text" class="form-control" ></div>
+						</div>
+						<!-- second -->
+						<div class="no-attend d-flex justify-content-between align-items-center">
+						<p>B.&nbsp;&nbsp;&nbsp;&nbsp;Price per attendees</p>
+						<div>$0.60</div>
+						</div>
+						<!-- third -->
+						<div class="no-attend d-flex justify-content-between align-items-center">
+						<p>Cost of Posting (A multiply by B)</p>
+						<div>$24.60</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+					<div class="form-check">
+						<input class="form-check-input mt-2" type="radio" name="" id="exampleRadios11" value="" checked="">
+						<input type="text" class="form-control" placeholder="" for="exampleRadios11" >
+					</div>
+					<div class="form-check mt-3">
+						<input type="text" class="form-control" placeholder="" >
+					</div>
+					<p style="font-size: 12px; margin-left: 20px;">Paypal email is   to receive funds and posting.</p>
+					<div class="form-check my-3">
+						<input class="form-check-input" type="radio" name="" id="exampleRadios11" value="" checked="">
+						<label class="form-check-label" for="exampleRadios11">
+							I will enter my Paypal email later.
+						</label>
+					</div>
+				</div>
+				</div>
+
+				<div class="col-md-12">
+						<div class="btm-check-term mt-5">
+							<form>
+								<div class="form-check">
+								 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								 <label> I understand I will recive 100% of invitee's payment (less paypal fee) directly to my paypal account.</label>
+								</div>
+								<div class="form-check">
+								 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								 <label>I agree to seek a dispute resolution at Paypal Resolution Center when a dispute arises with any invitees.</label>
+								</div>
+								<div class="form-check">
+								 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+								 <label>I agree with Domain.com <b>Terms.</b></label>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				<!-- step 8 end -->
+				<div class="buttons-d2 mt-5 mb-4 text-center">
+					<button type="submit" class="d-btn btn btn-dark" style="width: 140px;">Save/Unpost</button>
+					<button  class="d-btn btn btn-dark mr-4" style="width: 140px;">Post Now</button>
+
+				</div>
+
+			</div>
+		</div>
+	</form>
+	</section>
+	<!--Section End-->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-sort-up"></i></a>
+	</div>
+	{% endblock %}

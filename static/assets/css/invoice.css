@@ -1,0 +1,157 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:400,700");
+@page {
+  margin: 0.3cm;
+}
+html #clear {
+    clear: both;
+}html body {
+    font-family: 'Open Sans', sans-serif;
+}html header #top_heading {
+    width: 100%;
+    text-align: right;
+}html header #logo1 {
+    margin-bottom: 12px;
+}html header #logo1 img {
+    width: 91%;
+}html{
+    padding: 2mm 5mm;
+}html header {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    align-items: center;
+}html header #ABC { 
+    margin-left: -102px;
+    margin-top: 5px;
+}html header #logo img {
+    width: 60%;
+}html header #ABC1 h4 {
+    font-size: 15pt;
+    margin-bottom: 0;
+    margin-top: 5px;
+}html header #ABC1 p {
+    margin-top: 0px;
+    font-size: 13pt;
+}html header #ABC h4 {
+    margin-bottom: 0;
+    font-size: 15pt;
+}html header #ABC p {
+    margin-top: 0px;
+    font-size: 13pt;
+}html #invoice_table #table_content {
+    width: 100%;
+    border-collapse: inherit;
+    border-spacing: 0;
+    margin-bottom: 30px;
+}html #invoice_table #table_content th {
+    padding: 3mm 5mm;
+    text-align: left;
+    background-color: #c62027;
+    color: #fff;
+    font-size: 11pt;
+}
+html #invoice_table #table_content td {
+    padding: 3mm 5mm;
+    text-align: left;
+}html #invoice_detail {
+    width: 50%;
+    border-spacing: 0;
+}html #invoice_detail h5 {
+    margin: 0 0 8px 0;
+    font-size: 11pt;
+}html #invoice_detail #tr_bg {
+    background-color: #eaeaea;
+}html #invoice_detail #tr_bg td {
+    padding: 3mm 5mm;
+}html #invoice_detail td {
+    padding: 3mm 5mm;
+    font-size: 11pt;
+}html #ticket_invoice {
+    width: 100%;
+}html #ticket_invoice #ticket_invoice_left {
+    float: left;
+    width: 45%;
+}html #ticket_invoice #ticket_invoice_right {
+    float: left;
+    width: 50%;
+    margin-left: 15px;
+}html #ticket_invoice #ticket_invoice_left #invoice_detail {
+    width: 100% !important;
+}html #ticket_invoice_right #invoice_heading {
+    background-color: #eaeaea;
+    margin-bottom: 12px;
+}html #ticket_invoice_right #invoice_heading h4 {
+    padding: 3mm 5mm;
+    color: #000;
+    margin: 0;
+}html #ticket_invoice_right textarea {
+    width: 99% !important;
+}html #event_table #event_table_detail {
+    width: 100%;
+    border: 1px solid #ccc;
+}html #event_table #event_table_detail th {
+    text-align: left;
+    font-size: 11pt;
+    padding: 3mm 5mm;
+    border-bottom: 1px solid #ccc;
+}html #event_table #event_table_detail {
+    margin-top: 12px;
+    border-spacing: 0;
+}html #event_table #event_table_detail td {
+    padding: 3mm 5mm;
+    background-color: #ccc;
+}html #event_table #event_table_detail .chidren td {
+    background-color: #fff !important;
+}html #tickets_table {
+    width: 100%;
+}html #tickets_table #purchaser_table {
+    float: left;
+    width: 45%;
+    border: 1px solid #000;
+    padding: 2mm 5mm;
+    text-align: left;
+    margin-right: 12px;
+}html #tickets_table #event_table {
+    float: left;
+    width: 47%;
+    border: 1px solid #000;
+    padding: 3mm 5mm;
+    text-align: left;
+}html #tickets_table #purchaser_table th {
+    width: 117px;
+    padding-bottom: 14px;
+    font-size: 11pt;
+}html #tickets_table #event_table th {
+    width: 117px;
+    padding-bottom: 14px;
+    font-size: 11pt;
+}html #tickets_table #event_table td {
+    padding-bottom: 14px;
+    font-size: 11pt;
+}html #tickets_table #purchaser_table td {
+    padding-bottom: 14px;
+    font-size: 11pt;
+}html #scan_code {
+    margin-top: 55px;
+}html #scan_code #scan_block {
+    float: left;
+    width: 48%;
+    margin-right: 45px;
+}html #scan_code #scan_code_icon {
+    float: left;
+    width: 45%;
+}html #scan_code #scan_border {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 17mm 5mm;
+}html #scan_code #scan_border h4 {
+    font-size: 16pt;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: underline;
+}html #scan_code #scan_border h2 {
+    font-size: 35pt;
+    margin-top: 0;
+    margin-bottom: 0;
+}

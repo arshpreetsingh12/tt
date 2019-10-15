@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+	{% block content %}
+	
+
+	<section>
+		<div class="ticket-banner">
+		</div>
+		<div class="text-center banner-heading my-5">
+			<h2>
+				How it's Work
+			</h2>
+			<div class="border-bottom my-3"></div>	
+			<p class="py-4">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aliquam eligendi rerum placeat vel quam facere, adipisci, deserunt rem aliquid eaque! Commodi eos dolor consequatur quia vel quasi error iure?
+			</p>
+		</div>
+		<div class="mutliple-shows py-5">
+			<h2 class="text-center">
+				PlayList Events
+			</h2>
+			<div class="border-bottom my-3"></div>
+			<div class="container-fluid">
+				<div class="multiple_events_shows">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="text-center events_profile">
+								<div class="circle_img pt-3">
+									<img src="{% static '/assets/images/playlist.png' %}" alt="playlist">
+									<h5>Singing</h5>
+								</div>
+								<div class="py-3">
+									<h4>16+ Shows</h4>
+									<p>
+										Singing Shows
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="text-center events_profile">
+								<div class="circle_img pt-3">
+									<img src="{% static '/assets/images/playlist1.png' %}" alt="playlist1">
+									<h5>Dancing</h5>
+								</div>
+								<div class="py-3">
+									<h4>6+ Shows</h4>
+									<p>
+										Dancing Shows
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="text-center events_profile">
+								<div class="circle_img pt-3">
+									<img src="{% static '/assets/images/playlist2.png' %}" alt="playlist2">
+									<h5>Poetry</h5>
+								</div>
+								<div class="py-3">
+									<h4>165+ Shows</h4>
+									<p>
+										Poetry Shows
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="text-center events_profile">
+								<div class="circle_img pt-3">
+									<img src="{% static '/assets/images/playlist3.png' %}" alt="playlist3">
+									<h5>Boxing</h5>
+								</div>
+								<div class="py-3">
+									<h4>20+ Shows</h4>
+									<p>
+										Boxing Shows
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<div class="text-center banner-heading py-5" id="why_us" style="background-color: #f3f3f3;">
+			<h2>
+				Why Join Us ?
+			</h2>
+			<div class="border-bottom my-3"></div>	
+			<p class="py-4">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia aliquam eligendi rerum placeat vel quam facere, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sint maxime error animi esse fugiat aperiam vitae quidem voluptas sunt voluptatem facere mollitia numquam ratione, corrupti quaerat quae non perspiciatis.
+			</p>
+		</div>
+		<div class="recent-blog-img">
+			<div class="container-fluid">
+				<div class="recent-blog-post py-5">
+					<div class="text-center banner-heading pb-4">
+						<h2 style="color: #fff;">
+							Recent Events
+						</h2>
+						<div class="border-bottom my-3"></div>	
+					</div>
+					<!-- Set up your HTML -->
+					<div class="owl-carousel">
+						<div class="recent_border">
+							<div class="recent_bg">
+								<div>
+									<img src="{% static '/assets/images/events_opening.png' %}" alt="events_opening">
+								</div>
+								<div class="recent_detail d-flex pt-2">
+									<div class="recent_date">
+										<span class="mr-1">13</span> Sept
+									</div>
+									<div class="border-right"></div>
+									<div class="recent_info">
+										<h5>Demo Content</h5>
+										<p>
+											Juhu: Pune<br>
+											Artists<br>
+											Rs. 1200 onwards
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="recent_border">
+							<div class="recent_bg">
+								<div>
+									<img src="{% static '/assets/images/events_opening1.png' %}" alt="events_opening">
+								</div>
+								<div class="recent_detail d-flex pt-2">
+									<div class="recent_date">
+										<span class="mr-1">1</span> Oct
+									</div>
+									<div class="border-right"></div>
+									<div class="recent_info">
+										<h5>Demo Content</h5>
+										<p>
+											GuruDev Bhawan: Pune<br>
+											Yoga<br>
+											Rs. 300 onwards
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="recent_border">
+							<div class="recent_bg">
+								<div>
+									<img src="{% static '/assets/images/events_opening2.png' %}" alt="events_opening">
+								</div>
+								<div class="recent_detail d-flex pt-2">
+									<div class="recent_date">
+										<span class="mr-1">31</span> Oct
+									</div>
+									<div class="border-right"></div>
+									<div class="recent_info">
+										<h5>Demo Content</h5>
+										<p>
+											Shimla Resorts: Hp<br>
+											Singing<br>
+											Rs. 600 onwards
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="recent_border">
+							<div class="recent_bg">
+								<div>
+									<img src="{% static '/assets/images/events_opening3.png' %}" alt="events_opening">
+								</div>
+								<div class="recent_detail d-flex pt-2">
+									<div class="recent_date">
+										<span class="mr-1">8</span> Nov
+									</div>
+									<div class="border-right"></div>
+									<div class="recent_info">
+										<h5>Demo Content</h5>
+										<p>
+											Red Resorts: France<br>
+											Hip/PopUp<br>
+											Rs. 12000 onwards
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-sort-up"></i></a>
+	</div>
+	{% endblock %}
+	

@@ -1,0 +1,262 @@
+
+{% extends 'admin-base.html' %}
+{% load static from staticfiles %}
+{% block content %}
+  <!-- Content Wrapper. Contains page content -->
+
+  <div class="wrapper">
+  <div class="content-wrapper">
+
+    <section class="content container-fluid">
+      <h1 class="text-center">List of User</h1>
+    <!-- dashboard content -->
+    <div class="manage_admin">
+      <div class="add_min d-flex justify-content-between"> 
+    <h3>Manage User</h3>
+    <ul class="mg_top_ic">
+      <li><i class="fa fa-refresh" aria-hidden="true"></i></li>
+      <li><i class="fa fa-plus" aria-hidden="true"></i></li>
+      <li><i class="fa fa-lock" aria-hidden="true"></i></li>
+      <li><i class="fa fa-unlock" aria-hidden="true"></i></li>
+      <li><i class="fa fa-trash-o" aria-hidden="true"></i></li>
+    </ul>
+    </div>
+      <form>
+              <!-- <div class="d-flex justify-content-center">
+                <div class="mr-3">
+                  <label for="" class="mb-1">From</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="mr-3">
+                  <label for="" class="mb-1">To</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+ -->
+
+              <div class="posting_table">
+                <table id="example" class="table table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></th>
+                <th>Name</th>
+                <th>Email/User Name</th>
+                <th>Last Login</th>
+                <th>Last Payment / Date</th>
+                <th>CUM Total</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+          
+            <tr>
+                <td><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></td>
+                <td class="image_id">Custm Cust</td>
+                <td>xcustom88@gmail.com</td>
+                <td>2018-03-27 09:09:30</td>
+                <td>$##.## / YYYY-MM-DD</td>
+                <td>$ 160.00</td>
+                <td class="list_icon text-center"><a href="#"><i class="fa fa-unlock" aria-hidden="true"></i></a></td>
+                <td class="list_icon d-flex">
+                    <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    
+                    <a href="#">
+                     <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+                 </td>
+            </tr>
+             <tr>
+                <td><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></td>
+                <td class="image_id">Custm Cust</td>
+                <td>xcustom88@gmail.com</td>
+                <td>2018-03-27 09:09:30</td>
+                <td>$##.## / YYYY-MM-DD</td>
+                <td>$ 160.00</td>
+                <td class="list_icon text-center"><a href="#"><i class="fa fa-unlock" aria-hidden="true"></i></a></td>
+                <td class="list_icon d-flex">
+                    <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    
+                    <a href="#">
+                     <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+                 </td>
+            </tr>
+             <tr>
+                <td><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></td>
+                <td class="image_id">Custm Cust</td>
+                <td>xcustom88@gmail.com</td>
+                <td>2018-03-27 09:09:30</td>
+                <td>$##.## / YYYY-MM-DD</td>
+                <td>$ 160.00</td>
+                <td class="list_icon text-center"><a href="#"><i class="fa fa-unlock" aria-hidden="true"></i></a></td>
+                <td class="list_icon d-flex">
+                    <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    
+                    <a href="#">
+                     <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+                 </td>
+            </tr>
+               <tr>
+                <td><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></td>
+                <td class="image_id">Custm Cust</td>
+                <td>xcustom88@gmail.com</td>
+                <td>2018-03-27 09:09:30</td>
+                <td>$##.## / YYYY-MM-DD</td>
+                <td>$ 160.00</td>
+                <td class="list_icon text-center"><a href="#"><i class="fa fa-unlock" aria-hidden="true"></i></a></td>
+                <td class="list_icon d-flex">
+                    <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    
+                    <a href="#">
+                     <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+                 </td>
+            </tr>
+               <tr>
+                <td><label class="payment_gateway_checkbox"><input type="checkbox">
+                <span class="checkmark"></span>
+              </label></td>
+                <td class="image_id">Custm Cust</td>
+                <td>xcustom88@gmail.com</td>
+                <td>2018-03-27 09:09:30</td>
+                <td>$##.## / YYYY-MM-DD</td>
+                <td>$ 160.00</td>
+                <td class="list_icon text-center"><a href="#"><i class="fa fa-unlock" aria-hidden="true"></i></a></td>
+                <td class="list_icon d-flex">
+                    <a href="#" data-toggle="modal" data-target="#view_img_describ">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </a>
+                    
+                    <a href="#">
+                     <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+                 </td>
+            </tr>
+           
+           
+        </tbody>
+       <!--  <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot> -->
+    </table>
+              </div>
+              
+            
+            </form>
+    </div>
+      
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="pull-right-container">
+                    <span class="label label-danger pull-right">70%</span>
+                  </span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+
+{% endblock %}

@@ -1,0 +1,370 @@
+{% extends 'dashboard_base.html' %}
+{% load staticfiles %}
+
+	{% block content %}
+
+	<section>
+		<!-- <div class="about_us">
+			<h1>About Us</h1>
+			<div class="border-bottom my-3"></div>
+		</div> -->
+		<div class="container-fluid">
+			<div class="about_us_contain">
+				<h2>Manage Postings</h2>
+				<div class="border-bottom my-2 text-left" style="margin-left: 0;"></div>
+				<div class="ticket_manage_post mt-5">
+					<div class="d-flex justify-content-between mb-4">
+						<div class="history_detail" style="display: flex; align-self: center; width: 100%; margin-top: 11px;">
+							<label for="" class="mr-1 mt-1">Show</label>
+							<select name="" id="" class="px-2 py-1">
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">4</option>
+								<option value="">5</option>
+							</select>
+							<label for="" class="ml-1 mt-1 mr-2">entries</label>
+						</div>
+						<div class="history_detail">
+							<div class="d-flex">
+								<div class="mr-3">
+									<label for="" class="mb-1">From</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="mr-3">
+									<label for="" class="mb-1">To</label>
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="history_detail">
+							<label for=" " class="mb-1">Search:</label>
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col">Posting</th>
+									<th scope="col">Title</th>
+									<th scope="col">Event Date / Start Time</th>
+									<th scope="col" class="text-center">Attendees</th>
+									<th scope="col">Event Finder Code</th>
+									<th scope="col">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td scope="row">2016-05-16</td>
+									<td>
+										<a href="#">Oscar Weddings</a>
+									</td>
+									<td>2016-04-15/ 2:00 pm</td>
+									<td class="text-center"><a href="#" data-toggle="modal" data-target="#Guest_modal" data-target=".bd-example-modal-lg">30</a></td>
+									<td>EP58PUH3234K</td>
+									<td>
+										<a href="#" data-toggle="modal" data-target="#invited_modal">
+											<i class="far fa-envelope mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-download mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="far fa-edit mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="far fa-copy mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-times mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-dollar-sign mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-product-hunt"></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">2016-05-16</td>
+									<td>
+										<a href="#">Barclay Dance Recitail</a>
+									</td>
+									<td>2016-04-15/ 2:00 pm</td>
+									<td class="text-center"><a href="#" data-toggle="modal" data-target="#Guest_modal" data-target=".bd-example-modal-lg">20</a></td>
+									<td>EP58PUH3234K</td>
+									<td>
+										<a href="#" data-toggle="modal" data-target="#invited_modal">
+											<i class="far fa-envelope mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-download mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="far fa-edit mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="far fa-copy mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-times mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-dollar-sign mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-product-hunt"></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">2016-05-16</td>
+									<td><a href="#">Barclay Dance Recitail</a></td>
+									<td>2016-04-15/ 2:00 pm</td>
+									<td class="text-center"><a href="#" data-toggle="modal" data-target="#Guest_modal" data-target=".bd-example-modal-lg">15</a></td>
+									<td>EP58PUH3234K</td>
+									<td>
+										<a href="#" data-toggle="modal" data-target="#invited_modal">
+											<i class="far fa-envelope mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-download mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="far fa-edit mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="far fa-copy mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-times mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-dollar-sign mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-product-hunt"></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">2016-05-16</td>
+									<td><a href="#">Anant Wedding</a></td>
+									<td>2016-04-15/ 2:00 pm</td>
+									<td class="text-center"><a href="#" data-toggle="modal" data-target="#Guest_modal" data-target=".bd-example-modal-lg">15</a></td>
+									<td>EP58PUH3234K</td>
+									<td>
+										<a href="#" data-toggle="modal" data-target="#invited_modal">
+											<i class="far fa-envelope mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-download mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="far fa-edit mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="far fa-copy mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-times mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-dollar-sign mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-product-hunt"></i>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td scope="row">2016-05-16</td>
+									<td><a href="#">Billy Wedding</a></td>
+									<td>2016-04-15/ 2:00 pm</td>
+									<td class="text-center"><a href="#" data-toggle="modal" data-target="#Guest_modal" data-target=".bd-example-modal-lg">16</a></td>
+									<td>EP58PUH3234K</td>
+									<td>
+										<a href="#" data-toggle="modal" data-target="#invited_modal">
+											<i class="far fa-envelope mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-download mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="far fa-edit mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="far fa-copy mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-times mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fas fa-dollar-sign mr-2"></i>
+										</a>
+										<a href="#">
+											<i class="fab fa-product-hunt"></i>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="d-flex justify-content-between">
+							<div class="showing_heading">
+								<h3>Showing 1 to 3  of 3 entries</h3>
+							</div>
+							<div class="pagi">
+								<nav aria-label="Page navigation example">
+									<ul class="pagination">
+										<li class="page-item disabled">
+											<a class="page-link" href="#" tabindex="-1">Previous</a>
+										</li>
+										<li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
+										<li class="page-item">
+											<a class="page-link" href="#">Next</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<!-- Modal -->
+					<div class="modal fade bd-example-modal-lg" id="Guest_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="table-responsive mt-4">
+									<table class="table">
+										<thead class="thead-light">
+											<tr>
+												<th scope="col" class="text-center">Date</th>
+												<th scope="col" class="text-center">Guest Name</th>
+												<th scope="col" class="text-center">Title</th>
+												<th scope="col" class="text-center">Attendess</th>
+												<th scope="col" class="text-center">Purchase</th>
+												<th scope="col" class="text-center">Gift / Donation</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td scope="row">2019-02-23</td>
+												<td>Guest F</td>
+												<td>Oscar Wedding</td>
+												<td class="text-center"><span>2</span></td>
+												<td>$20. 00</td>
+												<td>$100. 00</td>
+											</tr>
+											<tr>
+												<td scope="row">2019-02-23</td>
+												<td>Guest D</td>
+												<td>Oscar Wedding</td>
+												<td class="text-center"><span>3</span></td>
+												<td>$10. 00</td>
+												<td>$100. 00</td>
+											</tr>
+											<tr>
+												<td scope="row">2019-02-23</td>
+												<td>Guest A</td>
+												<td>Oscar Wedding</td>
+												<td class="text-center"><span>4</span></td>
+												<td>$50. 00</td>
+												<td>$100. 00</td>
+											</tr>
+											<tr>
+												<td scope="row">2019-02-23</td>
+												<td>Guest D</td>
+												<td>Oscar Wedding</td>
+												<td class="text-center"><span>5</span></td>
+												<td>$50. 00</td>
+												<td>$100. 00</td>
+											</tr>
+											<tr>
+												<td scope="row">2019-02-23</td>
+												<td>Guest D</td>
+												<td>Oscar Wedding</td>
+												<td class="text-center"><span>5</span></td>
+												<td>$50. 00</td>
+												<td>$100. 00</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal fade bd-example-modal-lg" id="invited_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="d-flex justify-content-between upload_links mt-3 mb-0 mx-3">
+									<a href="#">Upload Background Image</a>
+									<a href="#">Free Images</a>
+									<a href="#">Download Invitation</a>
+								</div>
+								<div class="container-fluid background-img">
+										<div class="border py-4 px-3 my-3">
+											<div class="invited_area">
+												<h1 class="text-center">
+													<img src="./assets/images/thankyou-invited.png" class="img-fluid" alt="thankyou-invited">
+												</h1>
+												<div class="text-center mb-3 mt-3">
+													<div class="d-flex justify-content-center">
+														<i class="fas fa-star mr-3"></i>
+														<i class="fas fa-star mr-3"></i>
+														<i class="fas fa-star mr-3"></i>
+														<i class="fas fa-star mr-3"></i>
+														<i class="fas fa-star"></i>
+													</div>
+												</div>
+												<div class="d-flex mb-3">
+													<h6 class="mr-3">Title:</h6>
+													<p style="margin-top: -2px">demo demo</p>
+												</div>
+												<div class="d-flex mb-3 descrip_detail">
+													<h6 class="mr-3">Description:</h6>
+													<p style="margin-top: -2px">demo demo
+													demo demodemo demodemo demodemo demodemo demodemo demodemo demodemo demodemo demodemo demodemo demodemo demodemo demodemo demo</p>
+												</div>
+												<div class="d-flex mb-3">
+													<h6 class="mr-3">Event Date:</h6>
+													<p style="margin-top: -2px">july 28,19</p>
+												</div>
+												<div class="d-flex mb-3">
+													<h6 class="mr-3">Event Time:</h6>
+													<p style="margin-top: -2px">01:00 pm</p>
+												</div>
+												<div class="d-flex mb-3">
+													<h6 class="mr-3">Door Open:</h6>
+													<p style="margin-top: -2px">12:00 pm</p>
+												</div>
+												<div class="d-flex mb-3">
+													<h6 class="mr-3">Venue:</h6>
+													<p style="margin-top: -2px">sdhfsdfnsdfbsfbsdbdb</p>
+												</div>
+												<div class="text-center mt-4">
+													<p style="width: 100%;">Please go to domainname.com immediately to R.S.V.P</p>
+												</div>
+												<div class="text-center">
+													<p style="width: 100%;">Enter this Event Finder Code to secure your seat:</p>
+													<b style="font-size: 22px;">EXCVDFE</b>
+												</div>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Section End-->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-sort-up"></i></a>
+	</div>
+	{% endblock %}
+	

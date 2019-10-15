@@ -1,0 +1,1628 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block content %}
+	
+	<!-- Navbar End -->
+	<!--Section Start-->
+	<section>
+		<div class="about_us" style="background-image: inherit; padding: 50px 0;">
+			<h1>Events Details</h1>
+			<div class="border-bottom my-3"></div>
+		</div>
+		<div class="container-fluid">
+			<div class="about_us_contain event_tickets_details" style="padding: 0;">
+				<!--Tickeless Content-->
+				<div class="row mb-4">
+					<div class="offset-sm-12 offset-md-1 offset-lg-1"></div>
+					<div class="col-sm-12 col-md-10 col-lg-10">
+						<h2 class="my-3">
+							TICKETLESS
+						</h2>
+						<div class="d-flex bg_grey">
+							<div class="event_img">
+								<img src="{% static 'assets/images/events_opening3.png' %}" class="img-fluid" alt="events_opening3">
+							</div>
+							<div class="row w-100 py-3 pl-3">
+								<div class="col-md-6 col-sm-6">
+									<div class="events_details">
+										<ul>
+											<li>
+												<i class="fas fa-user-alt mr-2"></i>
+												<a href="#">John Snow</a>
+											</li>
+											<li>
+												<i class="fas fa-users mr-2"></i>
+												<a href="#">ABC Company</a>
+											</li>
+											<li>
+												<i class="far fa-map mr-2"></i>
+												<a href="#">123, Street B4, cardslight, NA.</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="events_details">
+										<ul>
+											<li>
+												<i class="fas fa-phone mr-2"></i>
+												<a href="#">+1 9012346754</a>
+											</li>
+											<li>
+												<i class="fas fa-id-card-alt mr-2"></i>
+												<a href="#">Contact</a>
+											</li>
+											<li>
+												<i class="fas fa-file mr-2"></i>
+												<a href="#">Business Licenece</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="w-100 px-3 py-2">
+									<p>
+										About: <span>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam doloremque adipisci quasi dolorem similique pariatur nostrum ipsam, iste corporis porro a possimus consectetur vero inventore ad recusandae esse, doloribus delectus.
+										</span>
+									</p>
+									<div class="mt-2">
+										<b>Venue: Holiday Inn Hotel, 455 Smith street, W.A</b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form class="my-3">
+							<div class="ticket_title mb-2">
+								<label>
+									Title
+								</label>
+								<input type="text" class="form-control">
+							</div>
+							<div class="ticket_title">
+								<label>
+									Description
+								</label><br>
+								<textarea  rows="4" class="w-100 form-control"></textarea>
+							</div>
+							<div class="ticketless_attend text-center my-3 p-3">
+								<h4>Can't attend this important events ?</h4>
+								<a href="#">click here</a>
+							</div>
+							<div class="count_person text-center mt-5">
+								<label> Enter the number of people attending</label>
+								<input type="text" class="form-control" style="width: 50px; margin: auto; margin-top: 24px; margin-bottom: 40px;">
+							</div>
+							<div class="text-center mt-4 ticket-submit">
+								<!-- <a href="#" data-toggle="modal" data-target="#tickless-modal-lg">Submit</a> -->
+								<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#tickless-modal-lg">Submit</button>
+								<!-- Modal -->
+								<div class="modal fade" id="tickless-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+									<div class="modal-dialog modal-lg" role="document" style="max-width: 1100px;">
+										<div class="modal-content">
+											<div class="modal-body">
+												<!-- Ticketless content -->
+												<h2 class="mb-3 ticket_heading">TICKETLESS</h2>	
+												<div class="ticket_popup ticket_popups modal-common-div">
+													<div class="thanks-page">
+														<h5>Thank you for your generosity.</h5>
+														<div class="d-flex my-3">
+															<label class="ticket_radio_btn"> Gift
+																<input type="radio"  name="radio">
+																<span class="checkmark"></span>
+															</label>
+															<label class="ticket_radio_btn ml-3 mr-3"> Donate
+																<input type="radio" name="radio">
+																<span class="checkmark"></span>
+															</label>
+															<div class="d-flex">
+																<label class="mr-2" style="    align-self: flex-end;">
+																	$
+																</label>
+																<input type="text" class="form-control" style="width: 45px;">
+															</div>
+														</div>
+														<textarea class="w-100 form-control mb-2" rows="4" placeholder="Enter Message Here"></textarea>
+													</div>
+													<div class="mb-2 mt-4 text-right">
+														<!-- <a href="#" class="next-btn">NEXT</a> -->
+														<button type="button" class="btn btn-dark_nc next-btn next-section-popup">NEXT</button>
+														<button type="button" class="btn btn-dark_nc cancel-btn ml-2" data-dismiss="modal">CANCEL</button>
+														<!-- <a href="#" class="cancel-btn ml-2" data-dismiss="modal">CANCEL</a> -->
+													</div>
+												</div>
+												<!-- my order 1 content-->
+												<div class="row my_order_popup modal-common-div" style="display: none;">
+													<div class="col-md-6 col-sm-12">
+														<div class="ticket_popup">
+															<div class="ticket_paypal_border">
+																<div class="d-flex justify-content-between">
+																	<h2 class="mb-3 oder-heading">My Order</h2>
+																	<div>
+																		<img src="{% static 'assets/images/paypal-logo.png' %}' %}" class="img-fluid"  alt="paypal-logo">
+																	</div>
+																</div>
+																<div class="table-responsive table_purchase">
+																	<table class="table table-hover">
+																		<thead>
+																			<tr>
+																				<th scope="col" colspan="5">Total Purchase</th>
+																				<th>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td colspan="6" class="text-center">Attendees: 0</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Subtotal</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Gift</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Grand Total</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<div class="card">
+																	<div class="card-header">
+																		<a href="#" class="photo"> X COMPANY (Seller's Name Terms)</a>
+																		<a href="#">Download</a>
+																	</div>
+																	<div class="card-body card-body_seller">
+																		<ul class="comp_saller">
+																			<li>Title</li>
+																			<li>Damage and defctive items</li>
+																			<li>I din't recive my item</li>
+																			<li>Wrong Item</li>
+																			<li>Item's can't be returned</li>
+																			<li>Restocking fee</li>
+																			<li>Return shipping</li>
+																			<li>No refund policy</li>
+																		</ul>
+																		</div>
+																</div>
+																
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6 col-sm-12">
+														<div class="text-left">
+															<div class="ticket_paypal_border">
+																<div class="ticket_popup">
+																	<h2 class="mb-3 mt-2 oder-heading">Billing Information</h2>
+																</div>
+																<div class="billing-inform">
+																	<form action="">
+																		<div class="form-group mb-2">
+																			<label>First Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Last Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address 2</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Country</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>State</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>City</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Phone</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<div class="d-flex">
+																					<div style="width: 35%;
+																					margin-right: 12px;">
+																						<label>Card Expires</label>
+																						<input type="text" class="form-control" placeholder="XX/XX">
+																					</div>
+																				<div style="width: 25%; margin-right: 12px;">
+																					<label>CVV</label>
+																					<input type="text" class="form-control" placeholder="XXX">
+																				</div>
+																				
+																				<div class="align-self-end" style="
+																				margin-right: 12px; margin-bottom: 8px;">
+																					<a href="#">Edit</a>
+																				</div>
+																			</div>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+														<div class="payment_gateway mt-5 text-left">
+																<label class="payment_gateway_checkbox"> I understand no change back and all sales are final
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="payment_gateway_checkbox"> I agree to seek Paypal Resolution Center utilizing <b>Paypal Buyer Protection</b> when a dispute arises.  
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+																<label class="payment_gateway_checkbox"> I agree to Domain.com <b>Terms</b> ans seller terms display above.
+																	<input type="checkbox">
+																	<span class="checkmark"></span>
+																</label>
+															</div>	
+															<div class="payments_btn mt-5 mb-3 mr-3  w-100">
+																	<button type="button" class="btn btn-dark_2 mr-2 back-btn prev-section-popup">BACK</button>
+																	<button type="button" class="btn btn-dark_2 mr-2 pay-btn next-section-popup">PAY NOW</button>
+																	<button type="button" class="btn btn-dark_2 cancel-btns" data-dismiss="modal">CANCEL</button>
+																</div>	
+													</div>
+															
+													
+												</div>
+												<!-- my order 2 content-->
+												<div class="row my_order1_popup modal-common-div" style="display: none;">
+													<div class="col-md-6 col-sm-12">
+														<div class="ticket_popup">
+															<div class="ticket_paypal_border">
+																<div class="d-flex justify-content-between">
+																	<h2 class="mb-3 oder-heading">My Order</h2>
+																	<div>
+																		<img src="{% static 'assets/images/paypal-logo.png' %}" class="img-fluid"  alt="paypal-logo">
+																	</div>
+																</div>
+																<div class="table_purchase">
+																	<div class="table-responsive">
+																		<table class="table table-hover">
+																			<thead>
+																				<tr>
+																					<th scope="col" colspan="5">Total Purchase</th>
+																					<th>
+																						
+																					</th>
+																					<th>
+																						<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																					</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td colspan="7" class="text-center">Attendees: 0</td>
+																				</tr>
+																				<tr>
+																					<th scope="col" colspan="6">Subtotal</th>
+																					<td>
+																						<input type="text" class="form-control" style="width: 125px; margin: 0 0 0 auto;">
+																					</td>
+																				</tr>
+																				<tr>
+																					<th scope="col" colspan="5">Gift</th>
+																					<td class="d-flex">
+																						<input type="text" class="form-control mr-2">
+																						<!-- <a href="#">Apply</a> -->
+																						<button type="button" class="btn btn-dark">Apply</button>
+																					</td>
+																					<td>
+																						<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																					</td>
+																				</tr>
+																				<tr>
+																					<th scope="col" colspan="6">Grand Total</th>
+																					<td>
+																						<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>	
+																	</div>
+																</div>
+																<div class="payment_gateway mt-5">
+																	<label class="payment_gateway_checkbox"> I agree with Domain.com Terms & Service Provider's Terms display above.
+																		<input type="checkbox">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>					
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6 col-sm-12">
+														<div class="text-left">
+															<div class="ticket_paypal_border">
+																<div class="ticket_popup">
+																	<h2 class="mb-3 mt-2 oder-heading">Billing Information</h2>
+																</div>
+																<div class="billing-inform">
+																	<form action="">
+																		<div class="form-group mb-2">
+																			<label>First Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Last Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address 2</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Country</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>State</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>City</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Phone</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<div class="d-flex">
+																					<div style="width: 35%;
+																					margin-right: 12px;">
+																						<label>Card Expires</label>
+																						<input type="text" class="form-control" placeholder="XX/XX">
+																					</div>
+																				<div style="width: 25%; margin-right: 12px;">
+																					<label>CVV</label>
+																					<input type="text" class="form-control" placeholder="XXX">
+																				</div>
+																				
+																				<div class="align-self-end" style="
+																				margin-right: 12px; margin-bottom: 8px;">
+																					<a href="#">Edit</a>
+																				</div>
+																			</div>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="payments_btn mt-4 mb-3 mr-3 text-right w-100">
+														<!-- <a href="#" class="mr-2 back-btn-1">BACK</a>
+														<a href="#" class="mr-2 pay-apply-btn">PAY NOW</a>
+														<a href="#"  class="cancel-btns" data-dismiss="modal">CANCEL</a> -->
+														<button type="button" class="btn btn-dark mr-2 back-btn-1 prev-section-popup">BACK</button>
+														<button type="button" class="btn btn-dark mr-2 pay-apply-btn next-section-popup">PAY NOW</button>
+														<button type="button" class="btn btn-dark cancel-btns" data-dismiss="modal">CANCEL</button>
+													</div>
+												</div>
+												<!-- congratulation content-->
+												<div class="congo_page_popup modal-common-div" style="display: none;">
+													<div class="congo_page py-3">
+														<h4 class="mb-3">Congratulations</h4>
+
+														<p class="mb-2">
+															Your transaction has been approved.<br>
+															An invoice has been sent to your email address.<br>
+															Go to "Order Histroy" to view all purchasing details.
+														</p>
+													</div>
+													<div class="d-flex justify-content-center">
+														<!-- <a href="#" class="mr-2">Continue To Shop</a>
+														<a href="#" class="mr-2 my_order">My Order History</a>
+														<a href="#" class="mr-2" data-dismiss="modal">Exit</a> -->
+														<button type="button" style="width: 171px;" class="btn btn-dark mr-2 next-section-popup">Continue To Shop</button>
+														<button type="button" class="btn btn-dark mr-2 my_order" style="width: 171px;">My Order History</button>
+														<button type="button" class="btn btn-dark cancel-btns" data-dismiss="modal" style="width: 171px;">Exit</button>
+													</div>
+												</div>
+												<!-- payment content-->
+												<div class="payment_popup modal-common-div" style="display: none;">
+													<div class="congo_page py-3">
+														<h4 class="mb-3">Payment Unsuccessful</h4>
+														
+														<p class="mb-2">
+															Please check with your credit card issuing bank or use another credit card.
+														</p>
+													</div>
+													<div class="d-flex justify-content-center">
+														<!-- <a href="#" class="mr-2">Back To My Order</a> -->
+														<!-- <a href="#" class="mr-2" data-dismiss="modal">Exit</a> -->
+														<button type="button" class="btn btn-dark mr-2 my_order" style="width: 172px;">Back To My Order</button>
+														<button type="button" class="btn btn-dark" data-dismiss="modal" style="width: 172px;">Exit</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="offset-sm-12 offset-md-1 offset-lg-1"></div>
+				</div>
+				<!--General Content-->
+				<div class="row mb-4">
+					<div class="offset-sm-12 offset-md-1 offset-lg-1"></div>
+					<div class="col-sm-12 col-md-10 col-lg-10">
+						<h2 class="my-3">
+							GENERAL ADMISSION
+						</h2>
+						<div class="d-flex bg_grey">
+							<div class="event_img">
+								<img src="{% static 'assets/images/events_opening3.png' %}" class="img-fluid" alt="events_opening3">
+							</div>
+							<div class="row w-100 py-3 pl-3">
+								<div class="col-md-6 col-sm-6">
+									<div class="events_details">
+										<ul>
+											<li>
+												<i class="fas fa-user-alt mr-2"></i>
+												<a href="#">John Snow</a>
+											</li>
+											<li>
+												<i class="fas fa-users mr-2"></i>
+												<a href="#">ABC Company</a>
+											</li>
+											<li>
+												<i class="far fa-map mr-2"></i>
+												<a href="#">123, Street B4, cardslight, NA.</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="events_details">
+										<ul>
+											<li>
+												<i class="fas fa-phone mr-2"></i>
+												<a href="#">+1 9012346754</a>
+											</li>
+											<li>
+												<i class="fas fa-id-card-alt mr-2"></i>
+												<a href="#">Contact</a>
+											</li>
+											<li>
+												<i class="fas fa-file mr-2"></i>
+												<a href="#">Business Licenece</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="w-100 px-3 py-2">
+									<p>
+										About: <span>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam doloremque adipisci quasi dolorem similique pariatur nostrum ipsam, iste corporis porro a possimus consectetur vero inventore ad recusandae esse, doloribus delectus.
+										</span>
+									</p>
+									<div class="mt-2">
+										<b>Venue: Holiday Inn Hotel, 455 Smith street, W.A</b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form class="my-3">
+							<div class="ticket_title mb-2">
+								<label>
+									Title
+								</label>
+								<input type="text" class="form-control">
+							</div>
+							<div class="ticket_title">
+								<label>
+									Description
+								</label><br>
+								<textarea  rows="4" class="w-100 form-control"></textarea>
+							</div>
+							<div class="ticketless_attend text-center my-3 p-3">
+								<h4>Can't attend this important events ?</h4>
+								<a href="#">click here</a>
+							</div>
+							<div class="count_person table-responsive">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th scope="col">Name of Seat</th>
+											<th scope="col">Avaliablity</th>
+											<th scope="col">Price</th>
+											<th scope="col">Quantity</th>
+											<th scope="col">Total</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">Gold</th>
+											<td>100</td>
+											<td>$1.00</td>
+											<td>
+												2.00
+											</td>
+											<td>
+												3.00
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Silver</th>
+											<td>100</td>
+											<td>$1.00</td>
+											<td>
+												2.00
+											</td>
+											<td>
+												3.00
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">Bronze</th>
+											<td>100</td>
+											<td>$1.00</td>
+											<td>
+												2.00
+											</td>
+											<td>
+												3.00
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5" class="text-right pt-4 addtocart">
+												<button type="button" class="btn btn-dark_3 mr-2" data-toggle="modal" data-target="#general-modal-lg">Add To Cart</button>
+												<button type="button" class="btn btn-dark_3">Cancel</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="text-center mt-4 ticket-submit">
+								<!--Genrnal content popup-->
+								<div class="modal fade" id="general-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+									<div class="modal-dialog modal-lg" role="document" style="max-width: 1100px;">
+										<div class="modal-content">
+											<div class="modal-body">
+												<!-- Ticketless content -->
+												<h2 class="mb-3 ticket_heading">GENERAL ADMISSION</h2>
+												<div class="ticket_popup ticket_popups">
+													<h5 class="mb-2">My Cart</h5>
+													<div class="count_person table-responsive">
+														<table class="table table-hover">
+															<thead>
+																<tr class="text-center">
+																	<th scope="col">Remove</th>
+																	<th scope="col">Seat Type</th>
+																	<th scope="col">Quantity</th>
+																	<th scope="col">First Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last Name</th>
+																	<th scope="col">Total</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr class="text-center">
+																	<th scope="row" class="text-center">
+																		<a href="#" class="remove_icon">
+																		   <i class="far fa-times-circle"></i>
+																		</a>
+																	</th>
+																	<td>Gold</td>
+																	<td>2</td>
+																	<td>
+																		<div class="d-flex justify-content-center">
+																			<input type="text" class="form-control" style="width: 150px;">
+																			<input type="text" class="form-control ml-2" style="width: 150px;">
+																		</div>
+																		<div class="d-flex mt-2 justify-content-center">
+																			<input type="text" class="form-control" style="width: 150px;">
+																			<input type="text" class="form-control ml-2" style="width: 150px;">
+																		</div>
+																	</td>
+																	<td>
+																		$200.00
+																	</td>
+																</tr>
+																<tr class="text-center">
+																	<th scope="row" class="text-center">
+																		<a href="#" class="remove_icon">
+																		   <i class="far fa-times-circle"></i>
+																		</a>
+																	</th>
+																	<td>Silver</td>
+																	<td>1</td>
+																	<td>
+																		<div class="d-flex justify-content-center">
+																			<input type="text" class="form-control" style="width: 150px;">
+																			<input type="text" class="form-control ml-2" style="width: 150px;">
+																		</div>
+																		<div class="d-flex mt-2 justify-content-center">
+																			<input type="text" class="form-control" style="width: 150px;">
+																			<input type="text" class="form-control ml-2" style="width: 150px;">
+																		</div>
+																	</td>
+																	<td>
+																		$200.00
+																	</td>
+																</tr>
+																<tr class="text-center">
+																	<th scope="row" class="text-center">
+																		<a href="#" class="remove_icon">
+																		   <i class="far fa-times-circle"></i>
+																		</a>
+																	</th>
+																	<td>Bronze</td>
+																	<td>1</td>
+																	<td>
+																		<div class="d-flex justify-content-center">
+																			<input type="text" class="form-control" style="width: 150px;">
+																			<input type="text" class="form-control ml-2" style="width: 150px;">
+																		</div>
+																		<div class="d-flex mt-2 justify-content-center">
+																			<input type="text" class="form-control" style="width: 150px;">
+																			<input type="text" class="form-control ml-2" style="width: 150px;">
+																		</div>
+																	</td>
+																	<td>
+																		$200.00
+																	</td>
+																</tr>
+																<tr class="text-center">
+																	<th scope="row" class="text-center">
+																	</th>
+																	<td></td>
+																	<th>3</th>
+																	<td>
+																	</td>
+																	<th>
+																		$600.00
+																	</th>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="thanks-page">
+														<h5>Thank you for your generosity.</h5>
+														<div class="d-flex my-3">
+															<label class="ticket_radio_btn"> Gift
+																<input type="radio"  name="radio">
+																<span class="checkmark"></span>
+															</label>
+															<label class="ticket_radio_btn ml-3 mr-3"> Donate
+																<input type="radio" name="radio">
+																<span class="checkmark"></span>
+															</label>
+															<div class="d-flex">
+																<label class="mr-2" style="    align-self: flex-end;">
+																	$
+																</label>
+																<input type="text" class="form-control" style="width: 45px;">
+															</div>
+														</div>
+														<textarea class="w-100 form-control mb-2" rows="4" placeholder="Enter Message Here"></textarea>
+													</div>
+													<div class="mb-2 mt-4 text-right">
+														<button type="button" class="btn btn-dark_nc next-btn-gernal">NEXT</button>
+														<button type="button" class="btn btn-dark_nc cancel-btn ml-2" data-dismiss="modal">CANCEL</button>
+													</div>
+												</div>
+												<!-- my order 1 content-->
+												<div class="row my_order_popup" style="display: none;">
+													<div class="col-md-6 col-sm-12">
+														<div class="ticket_popup">
+															<div class="ticket_paypal_border">
+																<div class="d-flex justify-content-between">
+																	<h2 class="mb-3 oder-heading">My Order</h2>
+																	<div>
+																		<img src="{% static 'assets/images/paypal-logo.png' %}" class="img-fluid"  alt="paypal-logo">
+																	</div>
+																</div>
+																<div class="table-responsive table_purchase">
+																	<table class="table table-hover">
+																		<thead>
+																			<tr>
+																				<th scope="col" colspan="5">Total Purchase</th>
+																				<th>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td colspan="6" class="text-center">Attendees: 0</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Subtotal</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Gift</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Grand Total</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<div class="card">
+																	<div class="card-header">
+																		<a href="#" class="photo">Seller's Name Terms (X COMPANY)</a>
+																		<a href="#">Download</a>
+																	</div>
+																	<div class="card-body">No Return Policy</div>
+																</div>
+																<div class="payment_gateway mt-5">
+																	<label class="payment_gateway_checkbox"> I agree to seek a dispute resolution at Paypal Resolution Center when a dispute arises with the Service Provider.
+																		<input type="checkbox">
+																		<span class="checkmark"></span>
+																	</label>
+																	<label class="payment_gateway_checkbox"> I agree with Domain.com Terms & Service Provider's Terms display above.
+																		<input type="checkbox">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>					
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6 col-sm-12">
+														<div class="text-left">
+															<div class="ticket_paypal_border">
+																<div class="ticket_popup">
+																	<h2 class="mb-3 mt-2 oder-heading">Billing Information</h2>
+																</div>
+																<div class="billing-inform">
+																	<form action="">
+																		<div class="form-group mb-2">
+																			<label>First Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Last Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address 2</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Country</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>State</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>City</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Phone</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<div class="d-flex">
+																				<div style="width: 25%; margin-right: 12px;">
+																					<label>CVV</label>
+																					<input type="text" class="form-control" placeholder="XXX">
+																				</div>
+																				<div style="width: 35%;
+																				margin-right: 12px;">
+																					<label>Card Expires</label>
+																					<input type="text" class="form-control" placeholder="XX/XX">
+																				</div>
+																				<div class="align-self-end" style="
+																				margin-right: 12px; margin-bottom: 8px;">
+																					<a href="#">Edit</a>
+																				</div>
+																			</div>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="payments_btn mt-4 mb-3 mr-3 text-right w-100">
+														<button type="button" class="btn btn-dark_2 mr-2 back-btn back-btn-gernal">BACK</button>
+														<button type="button" class="btn btn-dark_2 mr-2 back-btn pay-btn pay-btn-gernal">PAY NOW</button>
+														<button type="button" class="btn btn-dark_2 cancel-btns" data-dismiss="modal">CANCEL</button>
+													</div>	
+												</div>
+												<!-- my order 2 content-->
+												<div class="row my_order1_popup" style="display: none;">
+													<div class="col-md-6 col-sm-12">
+														<div class="ticket_popup">
+															<div class="ticket_paypal_border">
+																<div class="d-flex justify-content-between">
+																	<h2 class="mb-3 oder-heading">My Order</h2>
+																	<div>
+																		<img src="{% static 'assets/images/paypal-logo.png' %}" class="img-fluid"  alt="paypal-logo">
+																	</div>
+																</div>
+																<div class="table-responsive table_purchase">
+																	<table class="table table-hover">
+																		<thead>
+																			<tr>
+																				<th scope="col" colspan="5">Total Purchase</th>
+																				<th></th>
+																				<th>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td colspan="7" class="text-center">Attendees: 0</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="6">Subtotal</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 125px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Gift</th>
+																				<td class="d-flex">
+																					<input type="text" class="form-control mr-2">
+																					<button type="button" class="btn btn-dark">Apply</button>
+																				</td>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="6">Grand Total</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<div class="payment_gateway mt-5">
+																	<label class="payment_gateway_checkbox"> I agree with Domain.com Terms & Service Provider's Terms display above.
+																		<input type="checkbox">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>					
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6 col-sm-12">
+														<div class="text-left">
+															<div class="ticket_paypal_border">
+																<div class="ticket_popup">
+																	<h2 class="mb-3 mt-2 oder-heading">Billing Information</h2>
+																</div>
+																<div class="billing-inform">
+																	<form action="">
+																		<div class="form-group mb-2">
+																			<label>First Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Last Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address 2</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Country</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>State</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>City</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Phone</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<div class="d-flex">
+																				<div style="width: 25%; margin-right: 12px;">
+																					<label>CVV</label>
+																					<input type="text" class="form-control" placeholder="XXX">
+																				</div>
+																				<div style="width: 35%;
+																				margin-right: 12px;">
+																					<label>Card Expires</label>
+																					<input type="text" class="form-control" placeholder="XX/XX">
+																				</div>
+																				<div class="align-self-end" style="
+																				margin-right: 12px;">
+																					<a href="#">Edit</a>
+																				</div>
+																			</div>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="payments_btn mt-4 mb-3 mr-3 text-right w-100">
+														<button type="button" class="btn btn-dark_2 mr-2 back-btn-1 back-btn-gernal1">BACK</button>
+														<button type="button" class="btn btn-dark_2 mr-2 pay-apply-btn pay-apply-gernal">PAY NOW</button>
+														<button type="button" class="btn btn-dark_2 mr-2 cancel-btns" data-dismiss="modal">CANCEL</button>
+														<!-- <a href="#" class="mr-2 back-btn-1 back-btn-gernal1">BACK</a>
+														<a href="#" class="mr-2 pay-apply-btn pay-apply-gernal">PAY NOW</a>
+														<a href="#" data-dismiss="modal" class="cancel-btns">CANCEL</a> -->
+													</div>
+												</div>
+												<!-- congratulation content-->
+												<!-- congratulation content-->
+												<div class="congo_page_popup" style="display: none;">
+													<div class="congo_page py-3">
+														<h4 class="mb-3">Congratulations</h4>
+
+														<p class="mb-2">
+															Your transaction has been approved.<br>
+															An invoice has been sent to your email address.<br>
+															Go to "Order Histroy" to view all purchasing details.
+														</p>
+													</div>
+													<div class="d-flex justify-content-end">
+														<button type="button" class="btn btn-dark mr-2" style="width: 170px;">Continue To Shop</button>
+														<button type="button" class="btn btn-dark mr-2 my_order my_order_gernal" style="width: 170px;">My Order History</button>
+														<button type="button" class="btn btn-dark mr-2" style="width: 170px;" data-dismiss="modal">Exit</button>
+													</div>
+												</div>
+												<!-- payment content-->
+												<div class="payment_popup" style="display: none;">
+													<div class="congo_page py-3">
+														<h4 class="mb-3">Payment Unsuccessful</h4>
+														
+														<p class="mb-2">
+															Please check with your credit card issuing bank or use another credit card.
+														</p>
+													</div>
+													<div class="d-flex justify-content-end">
+														<button type="button" class="btn btn-dark mr-2" style="width: 170px;">Back To My Order</button>
+														<button type="button" data-dismiss="modal" class="btn btn-dark mr-2" style="width: 170px;">Exit</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="offset-sm-12 offset-md-1 offset-lg-1"></div>
+				</div>
+				<!--Assigened Content-->
+				<div class="row">
+					<div class="offset-sm-12 offset-md-1 offset-lg-1"></div>
+					<div class="col-sm-12 col-md-10 col-lg-10">
+						<h2 class="my-3">
+							ASSIGNED SEATS
+						</h2>
+						<div class="d-flex bg_grey">
+							<div class="event_img">
+								<img src="{% static 'assets/images/events_opening3.png' %}" class="img-fluid" alt="events_opening3">
+							</div>
+							<div class="row w-100 py-3 pl-3">
+								<div class="col-md-6 col-sm-6">
+									<div class="events_details">
+										<ul>
+											<li>
+												<i class="fas fa-user-alt mr-2"></i>
+												<a href="#">John Snow</a>
+											</li>
+											<li>
+												<i class="fas fa-users mr-2"></i>
+												<a href="#">ABC Company</a>
+											</li>
+											<li>
+												<i class="far fa-map mr-2"></i>
+												<a href="#">123, Street B4, cardslight, NA.</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="events_details">
+										<ul>
+											<li>
+												<i class="fas fa-phone mr-2"></i>
+												<a href="#">+1 9012346754</a>
+											</li>
+											<li>
+												<i class="fas fa-id-card-alt mr-2"></i>
+												<a href="#">Contact</a>
+											</li>
+											<li>
+												<i class="fas fa-file mr-2"></i>
+												<a href="#">Business Licenece</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="w-100 px-3 py-2">
+									<p>
+										About: <span>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam doloremque adipisci quasi dolorem similique pariatur nostrum ipsam, iste corporis porro a possimus consectetur vero inventore ad recusandae esse, doloribus delectus.
+										</span>
+									</p>
+									<div class="mt-2">
+										<b>Venue: Holiday Inn Hotel, 455 Smith street, W.A</b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form class="my-3">
+							<div class="ticket_title mb-2">
+								<label>
+									Title
+								</label>
+								<input type="text" class="form-control">
+							</div>
+							<div class="ticket_title">
+								<label>
+									Description
+								</label><br>
+								<textarea  rows="4" class="w-100 form-control"></textarea>
+							</div>
+							<div class="ticketless_attend text-center my-3 p-3">
+								<h4>Can't attend this important events ?</h4>
+								<a href="#">click here</a>
+							</div>
+							<div class="assign-chart" style="width: 100%; background: red;text-align: center; padding: 200px; color: #fff;">
+								ASSIGNED SEAT CHART
+							</div>
+							<div class="text-center mt-4 ticket-submit">
+								<!-- <a href="#" data-toggle="modal" data-target="#assigned-modal-lg">Submit</a> -->
+								<button type="button" class="btn btn-dark mr-2" data-toggle="modal" data-target="#assigned-modal-lg">Submit</button>
+								<!--Assigned content popup-->
+								<div class="modal fade" id="assigned-modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+									<div class="modal-dialog modal-lg" role="document" style="max-width: 1100px;">
+										<div class="modal-content">
+											<div class="modal-body">
+												<!-- Ticketless content -->
+												<h2 class="mb-3 ticket_heading ">ASSIGNED SEATS</h2>	
+												<div class="ticket_popup ticket_popups modal-common-div">
+													<h5 class="mb-2">My Cart</h5>
+													<div class="count_person table-responsive">
+														<table class="table table-hover">
+															<thead>
+																<tr class="text-center">
+																	<th scope="col">Remove</th>
+																	<th scope="col">Section</th>
+																	<th scope="col">Row</th>
+																	<th scope="col">Seat Number</th>
+																	<th scope="col">Quantity</th>
+																	<th scope="col">First Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last Name</th>
+																	<th scope="col">Total</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr class="text-center">
+																	<th scope="row" class="text-center">
+																		<a href="#" class="remove_icon">
+																		   <i class="far fa-times-circle"></i>
+																		</a>
+																	</th>
+																	<td>A</td>
+																	<td>a</td>
+																	<td>10</td>
+																	<td>1</td>
+																	<td>
+																		<div class="d-flex justify-content-center">
+																			<input type="text" class="form-control" style="width: 150px;">
+																			<input type="text" class="form-control ml-2" style="width: 150px;">
+																		</div>
+																	</td>
+																	<td>
+																		$200.00
+																	</td>
+																</tr>
+																<tr class="text-center">
+																	<th scope="row" class="text-center">
+																		<a href="#" class="remove_icon">
+																		   <i class="far fa-times-circle"></i>
+																		</a>
+																	</th>
+																	<td>A</td>
+																	<td>a</td>
+																	<td>10</td>
+																	<td>1</td>
+																	<td>
+																		<div class="d-flex justify-content-center">
+																			<input type="text" class="form-control" style="width: 150px;">
+																			<input type="text" class="form-control ml-2" style="width: 150px;">
+																		</div>
+																	</td>
+																	<td>
+																		$200.00
+																	</td>
+																</tr>
+																<tr class="text-center">
+																	<th scope="row" class="text-center">
+																		<a href="#" class="remove_icon">
+																		   <i class="far fa-times-circle"></i>
+																		</a>
+																	</th>
+																	<td>A</td>
+																	<td>a</td>
+																	<td>10</td>
+																	<td>1</td>
+																	<td>
+																		<div class="d-flex justify-content-center">
+																			<input type="text" class="form-control" style="width: 150px;">
+																			<input type="text" class="form-control ml-2" style="width: 150px;">
+																		</div>
+																	</td>
+																	<td>
+																		$200.00
+																	</td>
+																</tr>
+																<tr class="text-center">
+																	<th scope="row" class="text-center">
+																	</th>
+																	<td></td>
+																	<td></td>
+																	<td></td>
+																	<th>3</th>
+																	<td>
+																	</td>
+																	<th>
+																		$600.00
+																	</th>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="thanks-page">
+														<h5>Thank you for your generosity.</h5>
+														<div class="d-flex my-3">
+															<label class="ticket_radio_btn"> Gift
+																<input type="radio"  name="radio">
+																<span class="checkmark"></span>
+															</label>
+															<label class="ticket_radio_btn ml-3 mr-3"> Donate
+																<input type="radio" name="radio">
+																<span class="checkmark"></span>
+															</label>
+															<div class="d-flex">
+																<label class="mr-2" style="    align-self: flex-end;">
+																	$
+																</label>
+																<input type="text" class="form-control" style="width: 45px;">
+															</div>
+														</div>
+														<textarea class="w-100 form-control mb-4" rows="4" placeholder="Enter Message Here"></textarea>
+													</div>
+													<div class="mb-2 mt-4 text-right">
+														<button type="button" class="btn btn-dark_nc next-btn next-section-popup">NEXT</button>
+														<!-- <a href="#" class="next-btn">NEXT</a> -->
+														<!-- <a href="#" class="cancel-btn ml-2" data-dismiss="modal">CANCEL</a> -->
+														<button type="button" class="cancel-btn ml-2 btn btn-dark_nc" data-dismiss="modal">CANCEL</button>
+													</div>
+												</div>
+												<!-- my order 1 content-->
+												<div class="row my_order_popup modal-common-div" style="display: none;">
+													<div class="col-md-6 col-sm-12">
+														<div class="ticket_popup">
+															<div class="ticket_paypal_border">
+																<div class="d-flex justify-content-between">
+																	<h2 class="mb-3 oder-heading">My Order</h2>
+																	<div>
+																		<img src="{% static 'assets/images/paypal-logo.png' %}" class="img-fluid"  alt="paypal-logo">
+																	</div>
+																</div>
+																<div class="table-responsive table_purchase">
+																	<table class="table table-hover">
+																		<thead>
+																			<tr>
+																				<th scope="col" colspan="5">Total Purchase</th>
+																				<th>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td colspan="6" class="text-center">Attendees: 0</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Subtotal</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Gift</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Grand Total</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<div class="card">
+																	<div class="card-header">
+																		<a href="#" class="photo">Seller's Name Terms (X COMPANY)</a>
+																		<a href="#">Download</a>
+																	</div>
+																	<div class="card-body">No Return Policy</div>
+																</div>
+																<div class="payment_gateway mt-5">
+																	<label class="payment_gateway_checkbox"> I agree to seek a dispute resolution at Paypal Resolution Center when a dispute arises with the Service Provider.
+																		<input type="checkbox">
+																		<span class="checkmark"></span>
+																	</label>
+																	<label class="payment_gateway_checkbox"> I agree with Domain.com Terms & Service Provider's Terms display above.
+																		<input type="checkbox">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>				
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6 col-sm-12">
+														<div class="text-left">
+															<div class="ticket_paypal_border">
+																<div class="ticket_popup">
+																	<h2 class="mb-3 mt-2 oder-heading">Billing Information</h2>
+																</div>
+																<div class="billing-inform">
+																	<form action="">
+																		<div class="form-group mb-2">
+																			<label>First Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Last Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address 2</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Country</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>State</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>City</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Phone</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<div class="d-flex">
+																				<div style="width: 25%; margin-right: 12px;">
+																					<label>CVV</label>
+																					<input type="text" class="form-control" placeholder="XXX">
+																				</div>
+																				<div style="width: 35%;
+																				margin-right: 12px;">
+																					<label>Card Expires</label>
+																					<input type="text" class="form-control" placeholder="XX/XX">
+																				</div>
+																				<div class="align-self-end" style="
+																				margin-right: 12px;">
+																					<a href="#">Edit</a>
+																				</div>
+																			</div>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="payments_btn mt-4 mb-3 mr-3 text-right w-100">
+														<button type="button" class="mr-2 btn btn-dark_2 back-btn prev-section-popup">BACK</button>
+														<button type="button" class="mr-2 btn btn-dark_2 pay-btn next-section-popup">PAY NOW</button>
+														<button type="button" class="btn btn-dark_2 cancel-btns" data-dismiss="modal">CANCEL</button>
+													</div>
+												</div>
+												<!-- my order 2 content-->
+												<div class="row my_order1_popup modal-common-div" style="display: none;">
+													<div class="col-md-6 col-sm-12">
+														<div class="ticket_popup">
+															<div class="ticket_paypal_border">
+																<div class="d-flex justify-content-between">
+																	<h2 class="mb-3 oder-heading">My Order</h2>
+																	<div>
+																		<img src="{% static 'assets/images/paypal-logo.png' %}" class="img-fluid"  alt="paypal-logo">
+																	</div>
+																</div>
+																<div class="table-responsive table_purchase">
+																	<table class="table table-hover">
+																		<thead>
+																			<tr>
+																				<th scope="col" colspan="5">Total Purchase</th>
+																				<th></th>
+																				<th>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td colspan="7" class="text-center">Attendees: 0</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="6">Subtotal</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 125px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="5">Gift</th>
+																				<td class="d-flex">
+																					<input type="text" class="form-control mr-2">
+																					<button type="button" class="btn btn-dark">Apply</button>
+																				</td>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																			<tr>
+																				<th scope="col" colspan="6">Grand Total</th>
+																				<td>
+																					<input type="text" class="form-control" style="width: 96px; margin: 0 0 0 auto;">
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<div class="payment_gateway mt-5">
+																	<label class="payment_gateway_checkbox"> I agree with Domain.com Terms & Service Provider's Terms display above.
+																		<input type="checkbox">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>					
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6 col-sm-12">
+														<div class="text-left">
+															<div class="ticket_paypal_border">
+																<div class="ticket_popup">
+																	<h2 class="mb-3 mt-2 oder-heading">Billing Information</h2>
+																</div>
+																<div class="billing-inform">
+																	<form action="">
+																		<div class="form-group mb-2">
+																			<label>First Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Last Name</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Address 2</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Country</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>State</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>City</label>
+																			<select class="form-control" style="width: 100%;">
+																				<option></option>
+																				<option>1</option>
+																				<option>2</option>
+																			</select>
+																		</div>
+																		<div class="form-group mb-2">
+																			<label>Phone</label>
+																			<input type="text" class="form-control" required>
+																		</div>
+																		<div class="form-group mb-2">
+																			<div class="d-flex">
+																				<div style="width: 25%; margin-right: 12px;">
+																					<label>CVV</label>
+																					<input type="text" class="form-control" placeholder="XXX">
+																				</div>
+																				<div style="width: 35%;
+																				margin-right: 12px;">
+																					<label>Card Expires</label>
+																					<input type="text" class="form-control" placeholder="XX/XX">
+																				</div>
+																				<div class="align-self-end" style="
+																				margin-right: 12px;">
+																					<a href="#">Edit</a>
+																				</div>
+																			</div>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="payments_btn mt-4 mb-3 mr-3 text-right w-100">
+														<button type="button" class="mr-2 btn btn-dark_2 back-btn-1 prev-section-popup">BACK</button>
+														<button type="button" class="mr-2 btn btn-dark_2 pay-apply-btn next-section-popup">PAY NOW</button>
+														<button type="button" class="btn btn-dark_2 cancel-btns" data-dismiss="modal">CANCEL</button>
+													</div>
+												</div>
+												<!-- congratulation content-->
+												<div class="congo_page_popup modal-common-div" style="display: none;">
+													<div class="congo_page py-3">
+														<h4 class="mb-3">Congratulations</h4>
+
+														<p class="mb-2">
+															Your transaction has been approved.<br>
+															An invoice has been sent to your email address.<br>
+															Go to "Order Histroy" to view all purchasing details.
+														</p>
+													</div>
+													<div class="d-flex justify-content-end">
+														<button type="button" style="width: 170px;" class="btn btn-dark mr-2">Continue To Shop</button>
+														<button type="button" style="width: 170px;" class="btn btn-dark mr-2 my_order">My Order History</button>
+														<button type="button" style="width: 170px;" class="btn btn-dark" data-dismiss="modal">Exit</button>
+														<!-- <a href="#" class="mr-2">Continue To Shop</a> -->
+														<!-- <a href="#" class="mr-2 my_order">My Order History</a>
+														<a href="#" class="mr-2" data-dismiss="modal">Exit</a> -->
+													</div>
+												</div>
+												<!-- payment content-->
+												<div class="payment_popup" style="display: none;">
+													<div class="congo_page py-3">
+														<h4 class="mb-3">Payment Unsuccessful</h4>
+														
+														<p class="mb-2">
+															Please check with your credit card issuing bank or use another credit card.
+														</p>
+													</div>
+													<div class="d-flex justify-content-center">
+														<button type="button" style="width: 170px;" class="btn btn-dark mr-2 prev-section-popup">Back To My Order</button>
+														<button type="button" style="width: 170px;" class="btn btn-dark mr-2" data-dismiss="modal">Exit</button>
+														<!-- <a href="#" class="mr-2">Exit</a>
+														<a href="#" class="mr-2" data-dismiss="modal">Exit</a> -->
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="offset-sm-12 offset-md-1 offset-lg-1"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Section End-->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-sort-up"></i></a>
+	</div>
+	{% endblock %}

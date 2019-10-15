@@ -1,0 +1,196 @@
+{% extends 'tickets-base.html' %}
+{% load static from staticfiles %}
+
+
+	{% block content %}
+
+	
+<section>
+		<div class="about_us" style="background-image: inherit; padding: 50px 0;">
+			<h1>Ticket Events</h1>
+			<div class="border-bottom my-3"></div>
+		</div>
+		<div class="container-fluid">
+			<div class="about_us_contain event_tickets_details" style="padding: 0;">
+				<div class="row">
+					<div class="offset-sm-12 offset-md-1 offset-lg-1"></div>
+					<div class="col-sm-12 col-md-10 col-lg-10">
+						<div class="d-flex bg_grey">
+							<div class="event_img">
+								<img src="{% static 'assets/images/dummy-logo.png' %}" alt="dummy-logo">
+							</div>
+							<div class="row w-100 py-3 pl-3">
+								<div class="col-md-6 col-sm-6">
+									<div class="events_details">
+										<ul>
+											<li>
+												<i class="fas fa-user-alt mr-2"></i>
+												<a href="#">John Snow</a>
+											</li>
+											<li>
+												<i class="fas fa-users mr-2"></i>
+												<a href="#">ABC Company</a>
+											</li>
+											<li>
+												<i class="far fa-map mr-2"></i>
+												<a href="#">123, Street B4, cardslight, NA.</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="events_details">
+										<ul>
+											<li>
+												<i class="fas fa-phone mr-2"></i>
+												<a href="#">+1 9012346754</a>
+											</li>
+											<li>
+												<i class="fas fa-id-card-alt mr-2"></i>
+												<a href="#">Contact</a>
+											</li>
+											<li>
+												<i class="fas fa-file mr-2"></i>
+												<a href="#">Business License</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="w-100 px-3 py-2">
+									<p>
+										About: <span>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam doloremque adipisci quasi dolorem similique pariatur nostrum ipsam, iste corporis porro a possimus consectetur vero inventore ad recusandae esse, doloribus delectus.
+										</span>
+									</p>
+									<div class="mt-2">
+										<b>Venue: Holiday Inn Hotel, 455 Smith street, W.A</b>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="offset-sm-12 offset-md-1 offset-lg-1"></div>
+				</div>
+				<div class="row my-5">
+					<div class="col-md-4 col-sm-12">
+						<div class="event_border mb-3">
+							<div class="next_events_bg">
+								<div class="d-flex">
+									<div class="events_next_detail">
+										<img src="{% static 'assets/images/events_opening2.png' %}" class="img-fluid" alt="events_opening2">
+									</div>
+									<h5 class="event_h5 ml-2">
+										The Eagles Musical Concert
+									</h5>
+								</div>
+							</div>
+							<div class="events_list_st">
+								<ul>
+									<li>
+										<i class="fas fa-calendar-week"></i>
+										<a href="#">Event Starts: 2016-08-15 / 09:00 pm to 11.59 p.m</a>
+									</li>
+									<li>
+										<i class="far fa-clock"></i>
+										<a href="#">Open Door: 1.00 p.m</a>
+									</li>
+									<li>
+										<i class="fas fa-check"></i>
+										<a href="#">Ticket Sales Ends: 2016-08-15 / 09:00 pm</a>
+									</li>
+									<li>
+										<i class="fas fa-info-circle"></i>
+										Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit expedita voluptatem corporis, eaque voluptatum voluptas ipsum ea, id illo minima? Nostrum mollitia impedit fugiat nobis dolor dolorum deleniti sapiente natus?
+									</li>
+								</ul>
+								<div class="text-center event_enter pb-2 pt-4">
+									<button type="button" class="btn btn-dark">Enter Now</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-12">
+						<div class="event_border mb-3">
+							<div class="next_events_bg">
+								<div class="d-flex">
+									<div class="events_next_detail">
+										<img src="{% static 'assets/images/events_opening1.png' %}" class="img-fluid" alt="events_opening2">
+									</div>
+									<h5 class="event_h5 ml-2">
+										The Eagles Musical Concert
+									</h5>
+								</div>
+							</div>
+							<div class="events_list_st">
+								<ul>
+									<li>
+										<i class="fas fa-calendar-week"></i>
+										<a href="#">Event Starts: 2016-08-15 / 09:00 pm to 11.59 p.m</a>
+									</li>
+									<li>
+										<i class="far fa-clock"></i>
+										<a href="#">Open Door: 1.00 p.m</a>
+									</li>
+									<li>
+										<i class="fas fa-check"></i>
+										<a href="#">Ticket Sales Ends: 2016-08-15 / 09:00 pm</a>
+									</li>
+									<li>
+										<i class="fas fa-info-circle"></i>
+										Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit expedita voluptatem corporis, eaque voluptatum voluptas ipsum ea, id illo minima? Nostrum mollitia impedit fugiat nobis dolor dolorum deleniti sapiente natus?
+									</li>
+								</ul>
+								<div class="text-center event_enter pt-4 pb-2">
+									<button type="button" class="btn btn-dark">Enter Now</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-12">
+						<div class="event_border mb-3">
+							<div class="next_events_bg">
+								<div class="d-flex">
+									<div class="events_next_detail">
+										<img src="{% static 'assets/images/events_opening.png' %}" class="img-fluid" alt="events_opening2">
+									</div>
+									<h5 class="event_h5 ml-2">
+										The Eagles Musical Concert
+									</h5>
+								</div>
+							</div>
+							<div class="events_list_st">
+								<ul>
+									<li>
+										<i class="fas fa-calendar-week"></i>
+										<a href="#">Event Starts: 2016-08-15 / 09:00 pm to 11.59 p.m</a>
+									</li>
+									<li>
+										<i class="far fa-clock"></i>
+										<a href="#">Open Door: 1.00 p.m</a>
+									</li>
+									<li>
+										<i class="fas fa-check"></i>
+										<a href="#">Ticket Sales Ends: 2016-08-15 / 09:00 pm</a>
+									</li>
+									<li>
+										<i class="fas fa-info-circle"></i>
+										Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit expedita voluptatem corporis, eaque voluptatum voluptas ipsum ea, id illo minima? Nostrum mollitia impedit fugiat nobis dolor dolorum deleniti sapiente natus?
+									</li>
+								</ul>
+								<div class="text-center event_enter pb-2 pt-4">
+									<button type="button" class="btn btn-dark">Enter Now</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Section End-->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-sort-up"></i></a>
+	</div>
+	
+	{% endblock %}

@@ -1,0 +1,59 @@
+
+	{% load staticfiles %}
+	<!-- Footer Start-->
+	<footer class="pt-5 py-4">
+		<div class="text-center">
+			<div class="d-flex justify-content-center">
+				<div class="fb_icon mr-2">
+					<a href="{% url 'social:begin' 'facebook' %}">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+				</div>
+				<div class="tw_icon mr-2">
+					<a href="#">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</div>
+				<div class="gplus_icon">
+					<a href="{% url 'social:begin' 'google-oauth2' %}">
+						<i class="fab fa-google-plus-g"></i>	
+					</a>
+				</div>
+			</div>
+			<div class="footer_list_links mt-4 mb-2">
+				<ul class="d-flex justify-content-center">
+					<li class="mr-3">
+						<a href="{% url 'aboutus' %}">ABOUT</a>
+					</li>
+					<li class="mr-3">
+						<a href="{% url 'whyus' %}">WHY US</a>
+					</li>
+					<li class="mr-3">
+						<a href="{% url 'faq' %}">FAQ</a>
+					</li>
+					<li class="mr-3">
+						<a href="{% url 'contactus' %}">CONTACT</a>
+					</li>
+					<li class="mr-3">
+						<a href="{% url 'terms' %}">TERMS</a>
+					</li>
+					<li class="mr-3">
+						<a href="{% url 'privacy' %}">PRIVACY</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer_list_links">
+				<ul class="d-flex justify-content-center">
+					<li class="mr-3">
+						<a href="#">© Copyright 2019</a>
+					</li>
+					<li class="mr-3">
+						<a href="#">DOMAIN.COM</a>
+					</li>
+					<li class="mr-3">
+						<a href="#">All Rights Reserved</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>

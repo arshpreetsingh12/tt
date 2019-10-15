@@ -1,0 +1,486 @@
+{% extends 'tickets-base.html' %}
+{% load static from staticfiles %}
+
+
+	{% block content %}
+
+	</div>
+	<div class="nav_area">
+		<div class="mycart">
+			<!-- Ticket content -->
+			<h2 class="mb-3 ticket_heading mt-4">TICKETLESS</h2>	
+			<!-- my order 1 content-->
+			<div class="row my_order_popup modal-common-div">
+				<div class="col-md-6 col-sm-12">
+					<div class="ticket_popup">
+						<div class="ticket_paypal_border">
+							<div class="d-flex justify-content-between">
+								<h2 class="mb-3 oder-heading">My Order</h2>
+								<div>
+									<img src="{% static 'assets/images/paypal-logo.png' %}" class="img-fluid" alt="paypal-logo">
+								</div>
+							</div>
+							<div class="border-bottom"></div>
+							<div class="table-responsive table_purchase">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th scope="col" colspan="5">Total Purchase</th>
+											<th>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="6" class="text-center">Attendees: 0</td>
+										</tr>
+										<tr>
+											<th scope="col" colspan="5">Subtotal</th>
+											<td>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</td>
+										</tr>
+										<tr>
+											<th scope="col" colspan="5">Gift</th>
+											<td>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</td>
+										</tr>
+										<tr class="grand-total">
+											<th scope="col" colspan="5">Grand Total</th>
+											<td>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="card">
+								<div class="card-header">
+									<a href="#" class="photo"> X COMPANY (Seller's Name Terms)</a>
+									<a href="#">Download</a>
+								</div>
+								<div class="card-body card-body_seller">
+									<ul class="comp_saller">
+										<li>Title</li>
+										<li>Damage and defctive items</li>
+										<li>I din't recive my item</li>
+										<li>Wrong Item</li>
+										<li>Item's can't be returned</li>
+										<li>Restocking fee</li>
+										<li>Return shipping</li>
+										<li>No refund policy</li>
+									</ul>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="text-left">
+						<div class="ticket_paypal_border">
+							<div class="ticket_popup">
+								<h2 class="mb-3 mt-2 oder-heading">Billing Information</h2>
+							</div>
+							<div class="billing-inform">
+								<div class="form-group mb-2">
+									<label>First Name</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Last Name</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Address</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Address 2</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Country</label>
+									<select class="form-control" style="width: 100%;">
+										<option></option>
+										<option>1</option>
+										<option>2</option>
+									</select>
+								</div>
+								<div class="form-group mb-2">
+									<label>State</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>City</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Phone</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<div class="d-flex">
+										<div style="width: 35%;
+										margin-right: 12px;">
+											<label>Card Expires</label>
+											<input type="text" class="form-control" placeholder="XX/XX">
+										</div>
+										<div style="width: 25%; margin-right: 12px;">
+											<label>CVV</label>
+											<input type="text" class="form-control" placeholder="XXX">
+										</div>
+									
+										<div class="align-self-end" style="
+										margin-right: 12px; margin-bottom: 8px;">
+											<a href="#">Edit</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="payment_gateway mt-5 text-left">
+						<label class="payment_gateway_checkbox"> I understand no change back and all sales are final
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="payment_gateway_checkbox"> I agree to seek Paypal Resolution Center utilizing <b>Paypal Buyer Protection</b> when a dispute arises.  
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="payment_gateway_checkbox"> I agree to Domain.com <b>Terms</b> ans seller terms display above.
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					</div>	
+					<div class="payments_btn mt-5 mb-3 mr-3  w-100 text-center">
+						<button type="button" class="btn btn-dark_2 mr-2 pay-btn next-section-popup">PAY NOW</button>
+						<button type="button" class="btn btn-dark_2 cancel-btns" data-dismiss="modal">CANCEL</button>
+					</div>	
+				</div>
+			</div>
+			<!-- General content -->
+			<h2 class="mb-3 ticket_heading">GENERAL ADMISSION</h2>
+			<!-- my order 1 content-->
+			<div class="row my_order_popup modal-common-div">
+				<div class="col-md-6 col-sm-12">
+					<div class="ticket_popup">
+						<div class="ticket_paypal_border">
+							<div class="d-flex justify-content-between">
+								<h2 class="mb-3 oder-heading">My Order</h2>
+								<div>
+									<img src="{% static 'assets/images/paypal-logo.png' %}" class="img-fluid" alt="paypal-logo">
+								</div>
+							</div>
+							<div class="border-bottom"></div>
+							<div class="table-responsive table_purchase">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th scope="col" colspan="5">Total Purchase</th>
+											<th>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="6" class="text-center">Attendees: 0</td>
+										</tr>
+										<tr>
+											<th scope="col" colspan="5">Subtotal</th>
+											<td>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</td>
+										</tr>
+										<tr>
+											<th scope="col" colspan="5">Gift</th>
+											<td>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</td>
+										</tr>
+										<tr class="grand-total">
+											<th scope="col" colspan="5">Grand Total</th>
+											<td>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="card">
+								<div class="card-header">
+									<a href="#" class="photo"> X COMPANY (Seller's Name Terms)</a>
+									<a href="#">Download</a>
+								</div>
+								<div class="card-body card-body_seller">
+									<ul class="comp_saller">
+										<li>Title</li>
+										<li>Damage and defctive items</li>
+										<li>I din't recive my item</li>
+										<li>Wrong Item</li>
+										<li>Item's can't be returned</li>
+										<li>Restocking fee</li>
+										<li>Return shipping</li>
+										<li>No refund policy</li>
+									</ul>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="text-left">
+						<div class="ticket_paypal_border">
+							<div class="ticket_popup">
+								<h2 class="mb-3 mt-2 oder-heading">Billing Information</h2>
+							</div>
+							<div class="billing-inform">
+
+								<div class="form-group mb-2">
+									<label>First Name</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Last Name</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Address</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Address 2</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Country</label>
+									<select class="form-control" style="width: 100%;">
+										<option></option>
+										<option>1</option>
+										<option>2</option>
+									</select>
+								</div>
+								<div class="form-group mb-2">
+									<label>State</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>City</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Phone</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<div class="form-group mb-2">
+										<div class="d-flex">
+											<div style="width: 35%;
+											margin-right: 12px;">
+												<label>Card Expires</label>
+												<input type="text" class="form-control" placeholder="XX/XX">
+											</div>
+											<div style="width: 25%; margin-right: 12px;">
+												<label>CVV</label>
+												<input type="text" class="form-control" placeholder="XXX">
+											</div>
+										
+											<div class="align-self-end" style="
+											margin-right: 12px; margin-bottom: 8px;">
+												<a href="#">Edit</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="payment_gateway mt-5 text-left">
+						<label class="payment_gateway_checkbox"> I understand no change back and all sales are final
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="payment_gateway_checkbox"> I agree to seek Paypal Resolution Center utilizing <b>Paypal Buyer Protection</b> when a dispute arises.  
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="payment_gateway_checkbox"> I agree to Domain.com <b>Terms</b> ans seller terms display above.
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					</div>	
+					<div class="payments_btn mt-5 mb-3 mr-3  w-100 text-center">
+						<button type="button" class="btn btn-dark_2 mr-2 pay-btn next-section-popup">PAY NOW</button>
+						<button type="button" class="btn btn-dark_2 cancel-btns" data-dismiss="modal">CANCEL</button>
+					</div>	
+				</div>
+			</div>
+			<!-- Assigned content -->
+			<h2 class="mb-3 ticket_heading">ASSIGNED SEATS</h2>
+			<!-- my order 1 content-->
+			<div class="row my_order_popup modal-common-div">
+				<div class="col-md-6 col-sm-12">
+					<div class="ticket_popup">
+						<div class="ticket_paypal_border">
+							<div class="d-flex justify-content-between">
+								<h2 class="mb-3 oder-heading">My Order</h2>
+								<div>
+									<img src="{% static 'assets/images/paypal-logo.png' %}" class="img-fluid" alt="paypal-logo">
+								</div>
+							</div>
+							<div class="border-bottom"></div>
+							<div class="table-responsive table_purchase">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th scope="col" colspan="5">Total Purchase</th>
+											<th>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="6" class="text-center">Attendees: 0</td>
+										</tr>
+										<tr>
+											<th scope="col" colspan="5">Subtotal</th>
+											<td>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</td>
+										</tr>
+										<tr>
+											<th scope="col" colspan="5">Gift</th>
+											<td>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</td>
+										</tr>
+										<tr class="grand-total">
+											<th scope="col" colspan="5">Grand Total</th>
+											<td>
+												<input type="text" class="form-control" placeholder="$00.00" style="width: 96px; margin: 0 0 0 auto;">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="card">
+								<div class="card-header">
+									<a href="#" class="photo"> X COMPANY (Seller's Name Terms)</a>
+									<a href="#">Download</a>
+								</div>
+								<div class="card-body card-body_seller">
+									<ul class="comp_saller">
+										<li>Title</li>
+										<li>Damage and defctive items</li>
+										<li>I din't recive my item</li>
+										<li>Wrong Item</li>
+										<li>Item's can't be returned</li>
+										<li>Restocking fee</li>
+										<li>Return shipping</li>
+										<li>No refund policy</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<div class="text-left">
+						<div class="ticket_paypal_border">
+							<div class="ticket_popup">
+								<h2 class="mb-3 mt-2 oder-heading">Billing Information</h2>
+							</div>
+							<div class="billing-inform">
+								<div class="form-group mb-2">
+									<label>First Name</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Last Name</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Address</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Address 2</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Country</label>
+									<select class="form-control" style="width: 100%;">
+										<option></option>
+										<option>1</option>
+										<option>2</option>
+									</select>
+								</div>
+								<div class="form-group mb-2">
+									<label>State</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>City</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<label>Phone</label>
+									<input type="text" class="form-control" required="">
+								</div>
+								<div class="form-group mb-2">
+									<div class="d-flex">
+										<div style="width: 35%;
+										margin-right: 12px;">
+											<label>Card Expires</label>
+											<input type="text" class="form-control" placeholder="XX/XX">
+										</div>
+										<div style="width: 25%; margin-right: 12px;">
+											<label>CVV</label>
+											<input type="text" class="form-control" placeholder="XXX">
+										</div>
+									
+										<div class="align-self-end" style="
+										margin-right: 12px; margin-bottom: 8px;">
+											<a href="#">Edit</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="payment_gateway mt-5 text-left">
+						<label class="payment_gateway_checkbox"> I understand no change back and all sales are final
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="payment_gateway_checkbox"> I agree to seek Paypal Resolution Center utilizing <b>Paypal Buyer Protection</b> when a dispute arises.  
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="payment_gateway_checkbox"> I agree to Domain.com <b>Terms</b> ans seller terms display above.
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+					</div>	
+					<div class="payments_btn mt-5 mb-3 mr-3  w-100 text-center">
+						<button type="button" class="btn btn-dark_2 mr-2 pay-btn next-section-popup">PAY NOW</button>
+						<button type="button" class="btn btn-dark_2 cancel-btns" data-dismiss="modal">CANCEL</button>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- Navbar End -->
+	<!-- Scroll Page-->
+	<div class="scroll_page">
+		<a href="javascript:" id="return-to-top"><i class="fas fa-sort-up"></i></a>
+	</div>
+	
+	{% endblock %}

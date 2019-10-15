@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+
+	{% block content %}
+	
+	<section>
+		<div class="contact_us">
+			<h1>Contact Us</h1>
+			<div class="border-bottom my-3"></div>
+		</div>
+		<div class="container-fluid">
+			<div class="contact_us_contain">
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						<form>
+							<div class="row">
+								<div class="col-12 col-sm-6 col-md-6">
+									<div class="form-group">
+										<label>First Name </label>
+										<input type="text" class="form-control" required>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-6">
+									<div class="form-group">
+										<label>Last Name </label>
+										<input type="text" class="form-control" required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 col-sm-6 col-md-6">
+									<div class="form-group">
+										<label>Email </label>
+										<input type="email" class="form-control" required>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-6">
+									<div class="form-group">
+										<label>Subject </label>
+										<input type="text" class="form-control" required>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Type of Inquiry </label>
+								<select class="form-control">
+									<option selected value=""></option>
+									<option>General</option>
+									<option>Security</option>
+									<option>Suggestion</option>
+									<option>Others</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Message </label>
+								<textarea class="form-control" rows="6s"></textarea>
+							</div>
+							<div class="form-group py-3">
+								<div class="">
+									<div class="form-group py-3 mr-4 d-flex justify-content-left">
+										<div id="upload_button" class=" align-self-center">
+											<label>
+												<input type="file" ngf-select="" ng-model="new_files" multiple="">
+												<button class="btn btn-dark">Browse...</button>
+												<span>No File Selected.</span>
+											</label>
+											<!-- <p class="upload-text">Company Logo (200 x 200px)</p> -->
+										</div>
+										<div class="cb-logo ml-5"><img src="{% static 'assets/images/com-logo.png' %}" alt="company"></div>
+									</div>
+								</div>
+							</div>
+							<div class="text-left">
+								<img src="{% static 'assets/images/capcha.png' %}" class="img-fluid" alt="capcha">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="text-center send_btn pt-3 mb-5">
+				<button type="button" class="btn btn-dark">Send Message</button>
+			</div>
+		</div>
+	</section>
+
+	{% endblock %}
